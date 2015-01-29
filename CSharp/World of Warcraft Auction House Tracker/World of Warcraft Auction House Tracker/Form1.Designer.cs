@@ -77,10 +77,11 @@
             this.serverPopDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.serverBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Location = new System.Drawing.Point(4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(791, 451);
+            this.dataGridView1.Size = new System.Drawing.Size(569, 557);
             this.dataGridView1.TabIndex = 0;
             // 
             // serverIDDataGridViewTextBoxColumn
@@ -89,6 +90,7 @@
             this.serverIDDataGridViewTextBoxColumn.HeaderText = "Server_ID";
             this.serverIDDataGridViewTextBoxColumn.Name = "serverIDDataGridViewTextBoxColumn";
             this.serverIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.serverIDDataGridViewTextBoxColumn.Visible = false;
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -103,6 +105,7 @@
             this.uRLNameDataGridViewTextBoxColumn.HeaderText = "URL_Name";
             this.uRLNameDataGridViewTextBoxColumn.Name = "uRLNameDataGridViewTextBoxColumn";
             this.uRLNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.uRLNameDataGridViewTextBoxColumn.Visible = false;
             // 
             // subRegionDataGridViewTextBoxColumn
             // 
@@ -158,7 +161,8 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(829, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(595, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "topMenuStrip";
             // 
@@ -167,13 +171,13 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.quitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(44, 24);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // quitToolStripMenuItem
             // 
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(106, 24);
             this.quitToolStripMenuItem.Text = "Quit";
             // 
             // helpToolStripMenuItem
@@ -182,19 +186,19 @@
             this.aboutToolStripMenuItem,
             this.readMeToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(133, 24);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // readMeToolStripMenuItem
             // 
             this.readMeToolStripMenuItem.Name = "readMeToolStripMenuItem";
-            this.readMeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.readMeToolStripMenuItem.Size = new System.Drawing.Size(133, 24);
             this.readMeToolStripMenuItem.Text = "ReadMe";
             // 
             // tabControl
@@ -202,51 +206,56 @@
             this.tabControl.Controls.Add(this.ServerListTab);
             this.tabControl.Controls.Add(this.tabPage2);
             this.tabControl.Controls.Add(this.tabPage3);
-            this.tabControl.Location = new System.Drawing.Point(12, 28);
+            this.tabControl.Location = new System.Drawing.Point(16, 34);
+            this.tabControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(805, 483);
+            this.tabControl.Size = new System.Drawing.Size(585, 594);
             this.tabControl.TabIndex = 2;
             // 
             // ServerListTab
             // 
             this.ServerListTab.Controls.Add(this.dataGridView1);
-            this.ServerListTab.Location = new System.Drawing.Point(4, 22);
+            this.ServerListTab.Location = new System.Drawing.Point(4, 25);
+            this.ServerListTab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ServerListTab.Name = "ServerListTab";
-            this.ServerListTab.Padding = new System.Windows.Forms.Padding(3);
-            this.ServerListTab.Size = new System.Drawing.Size(797, 457);
+            this.ServerListTab.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ServerListTab.Size = new System.Drawing.Size(577, 565);
             this.ServerListTab.TabIndex = 0;
             this.ServerListTab.Text = "Servers";
             this.ServerListTab.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(797, 457);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Size = new System.Drawing.Size(1065, 565);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // tabPage3
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(797, 457);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Size = new System.Drawing.Size(1065, 565);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(829, 523);
+            this.ClientSize = new System.Drawing.Size(595, 644);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
