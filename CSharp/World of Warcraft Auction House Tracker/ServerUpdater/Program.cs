@@ -10,6 +10,7 @@ namespace ServerUpdater
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
