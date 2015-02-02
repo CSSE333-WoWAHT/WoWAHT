@@ -24,8 +24,6 @@ namespace ServerUpdater
 
             setupTempFolder();
 
-            //testRun();
-
             timer = new Timer();
             timer.Interval = 60 * 1000 * 15;
             timer.Elapsed += updateAuctions;
@@ -111,7 +109,7 @@ namespace ServerUpdater
             }
             uploadConnection.Open();
             String sqlPath = path.Replace("\\", "\\\\").Replace("'", "''");
-            String query = "LOAD DATA LOCAL INFILE '" + sqlPath + @"' INTO TABLE auction_raw FIELDS TERMINATED BY ',' ENCLOSED BY '''' ESCAPED BY '\\' LINES TERMINATED BY '\r\n';";
+            String query = "LOAD DATA LOCAL INFILE '" + sqlPath + @"' INTO TABLE auction_raw CHARACTER SET UTF8 FIELDS TERMINATED BY ',' ENCLOSED BY '''' ESCAPED BY '\\' LINES TERMINATED BY '\r\n';";
             MySql.Data.MySqlClient.MySqlCommand command = new MySql.Data.MySqlClient.MySqlCommand(query, uploadConnection);
 
             command.ExecuteNonQuery();

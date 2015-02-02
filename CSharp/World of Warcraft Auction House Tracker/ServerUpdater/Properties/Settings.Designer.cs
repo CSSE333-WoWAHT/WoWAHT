@@ -27,7 +27,7 @@ namespace ServerUpdater.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("server=cj-w7-pc.reshall.rose-hulman.edu;user id=wowAHTAdmin;password=12345;databa" +
-            "se=wowaht")]
+            "se=wowaht;Charset=utf8;")]
         public string wowahtConnectionString {
             get {
                 return ((string)(this["wowahtConnectionString"]));

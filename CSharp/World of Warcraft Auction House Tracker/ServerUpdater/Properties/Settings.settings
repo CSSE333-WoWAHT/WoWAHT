@@ -5,10 +5,10 @@
     <Setting Name="wowahtConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;server=cj-w7-pc.reshall.rose-hulman.edu;user id=wowAHTAdmin;password=12345;database=wowaht&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;server=cj-w7-pc.reshall.rose-hulman.edu;user id=wowAHTAdmin;password=12345;database=wowaht;Charset=utf8;&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;MySql.Data.MySqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">server=cj-w7-pc.reshall.rose-hulman.edu;user id=wowAHTAdmin;password=12345;database=wowaht</Value>
+      <Value Profile="(Default)">server=cj-w7-pc.reshall.rose-hulman.edu;user id=wowAHTAdmin;password=12345;database=wowaht;Charset=utf8;</Value>
     </Setting>
     <Setting Name="snapshotFolder" Type="System.String" Scope="User">
       <Value Profile="(Default)">snapshots</Value>
