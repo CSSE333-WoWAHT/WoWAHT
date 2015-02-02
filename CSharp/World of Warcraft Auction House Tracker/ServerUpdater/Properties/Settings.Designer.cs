@@ -33,5 +33,17 @@ namespace ServerUpdater.Properties {
                 return ((string)(this["wowahtConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("snapshots")]
+        public string snapshotFolder {
+            get {
+                return ((string)(this["snapshotFolder"]));
+            }
+            set {
+                this["snapshotFolder"] = value;
+            }
+        }
     }
 }

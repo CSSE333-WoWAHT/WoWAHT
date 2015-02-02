@@ -10,5 +10,8 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">server=cj-w7-pc.reshall.rose-hulman.edu;user id=wowAHTAdmin;password=12345;database=wowaht</Value>
     </Setting>
+    <Setting Name="snapshotFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">snapshots</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

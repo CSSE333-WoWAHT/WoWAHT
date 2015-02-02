@@ -27,23 +27,23 @@ namespace ServerUpdater
 
     public class Auction
     {
-        public long auc { get; set; }
-        public int item { get; set; }
+        public ulong auc { get; set; }
+        public uint item { get; set; }
         public string owner { get; set; }
         public string ownerRealm { get; set; }
-        public long bid { get; set; }
-        public long buyout { get; set; }
-        public int quantity { get; set; }
+        public ulong bid { get; set; }
+        public ulong buyout { get; set; }
+        public uint quantity { get; set; }
         public string timeLeft { get; set; }
         public long rand { get; set; }
         public long seed { get; set; }
         public long context { get; set; }
         public List<BonusList> bonusLists { get; set; }
         public List<Modifier> modifiers { get; set; }
-        public int? petSpeciesId { get; set; }
-        public int? petBreedId { get; set; }
-        public int? petLevel { get; set; }
-        public int? petQualityId { get; set; }
+        public uint? petSpeciesId { get; set; }
+        public uint? petBreedId { get; set; }
+        public uint? petLevel { get; set; }
+        public uint? petQualityId { get; set; }
     }
 
     public class Auctions
@@ -56,4 +56,6 @@ namespace ServerUpdater
         public Realm realm { get; set; }
         public Auctions auctions { get; set; }
     }
+
+
 }
