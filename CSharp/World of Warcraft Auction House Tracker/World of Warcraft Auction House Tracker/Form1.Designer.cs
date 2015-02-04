@@ -30,20 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.serverBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.readMeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabControl = new System.Windows.Forms.TabControl();
-            this.ServerListTab = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.ItemsTab = new System.Windows.Forms.TabPage();
-            this.ProfessionTab = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.serverIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.uRLNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,32 +37,52 @@
             this.regionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.serverPopDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.serverBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.wowahtPublicDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.wowahtPublicDataSet = new World_of_Warcraft_Auction_House_Tracker.wowahtPublicDataSet();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.readMeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabControl = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.ItemsTab = new System.Windows.Forms.TabPage();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.woWItemIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ServerListTab = new System.Windows.Forms.TabPage();
+            this.ServerSearch = new System.Windows.Forms.TextBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.ProfessionTab = new System.Windows.Forms.TabPage();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.professionIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.abbrevationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.professionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.serverTableAdapter = new World_of_Warcraft_Auction_House_Tracker.wowahtPublicDataSetTableAdapters.serverTableAdapter();
             this.itemsTableAdapter1 = new World_of_Warcraft_Auction_House_Tracker.wowahtPublicDataSetTableAdapters.itemsTableAdapter();
             this.auctionsTableAdapter1 = new World_of_Warcraft_Auction_House_Tracker.wowahtPublicDataSetTableAdapters.auctionsTableAdapter();
             this.auctionsTableAdapter2 = new World_of_Warcraft_Auction_House_Tracker.wowahtPublicDataSetTableAdapters.auctionsTableAdapter();
-            this.woWItemIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.itemTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.professionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.professionTableAdapter = new World_of_Warcraft_Auction_House_Tracker.wowahtPublicDataSetTableAdapters.professionTableAdapter();
-            this.professionIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.abbrevationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemSearch = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serverBindingSource)).BeginInit();
-            this.menuStrip1.SuspendLayout();
-            this.tabControl.SuspendLayout();
-            this.ServerListTab.SuspendLayout();
-            this.ItemsTab.SuspendLayout();
-            this.ProfessionTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wowahtPublicDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wowahtPublicDataSet)).BeginInit();
+            this.menuStrip1.SuspendLayout();
+            this.tabControl.SuspendLayout();
+            this.ItemsTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
+            this.ServerListTab.SuspendLayout();
+            this.ProfessionTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.professionBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -101,144 +107,8 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(571, 549);
+            this.dataGridView1.Size = new System.Drawing.Size(564, 549);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // serverBindingSource
-            // 
-            this.serverBindingSource.DataMember = "server";
-            this.serverBindingSource.DataSource = this.wowahtPublicDataSetBindingSource;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.helpToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(610, 28);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "topMenuStrip";
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.quitToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(44, 24);
-            this.fileToolStripMenuItem.Text = "File";
-            // 
-            // quitToolStripMenuItem
-            // 
-            this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(106, 24);
-            this.quitToolStripMenuItem.Text = "Quit";
-            // 
-            // helpToolStripMenuItem
-            // 
-            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem,
-            this.readMeToolStripMenuItem});
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
-            this.helpToolStripMenuItem.Text = "Help";
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(133, 24);
-            this.aboutToolStripMenuItem.Text = "About";
-            // 
-            // readMeToolStripMenuItem
-            // 
-            this.readMeToolStripMenuItem.Name = "readMeToolStripMenuItem";
-            this.readMeToolStripMenuItem.Size = new System.Drawing.Size(133, 24);
-            this.readMeToolStripMenuItem.Text = "ReadMe";
-            // 
-            // tabControl
-            // 
-            this.tabControl.Controls.Add(this.ServerListTab);
-            this.tabControl.Controls.Add(this.ItemsTab);
-            this.tabControl.Controls.Add(this.ProfessionTab);
-            this.tabControl.Location = new System.Drawing.Point(16, 35);
-            this.tabControl.Margin = new System.Windows.Forms.Padding(4);
-            this.tabControl.Name = "tabControl";
-            this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(579, 596);
-            this.tabControl.TabIndex = 2;
-            // 
-            // ServerListTab
-            // 
-            this.ServerListTab.Controls.Add(this.textBox1);
-            this.ServerListTab.Controls.Add(this.dataGridView1);
-            this.ServerListTab.Location = new System.Drawing.Point(4, 25);
-            this.ServerListTab.Margin = new System.Windows.Forms.Padding(4);
-            this.ServerListTab.Name = "ServerListTab";
-            this.ServerListTab.Padding = new System.Windows.Forms.Padding(4);
-            this.ServerListTab.Size = new System.Drawing.Size(571, 567);
-            this.ServerListTab.TabIndex = 0;
-            this.ServerListTab.Text = "Servers";
-            this.ServerListTab.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBox1.Location = new System.Drawing.Point(7, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(399, 22);
-            this.textBox1.TabIndex = 1;
-            // 
-            // ItemsTab
-            // 
-            this.ItemsTab.Controls.Add(this.dataGridView2);
-            this.ItemsTab.Location = new System.Drawing.Point(4, 25);
-            this.ItemsTab.Margin = new System.Windows.Forms.Padding(4);
-            this.ItemsTab.Name = "ItemsTab";
-            this.ItemsTab.Padding = new System.Windows.Forms.Padding(4);
-            this.ItemsTab.Size = new System.Drawing.Size(571, 567);
-            this.ItemsTab.TabIndex = 1;
-            this.ItemsTab.Text = "Items";
-            this.ItemsTab.UseVisualStyleBackColor = true;
-            this.ItemsTab.Click += new System.EventHandler(this.ItemsTab_Click);
-            // 
-            // ProfessionTab
-            // 
-            this.ProfessionTab.Controls.Add(this.dataGridView3);
-            this.ProfessionTab.Location = new System.Drawing.Point(4, 25);
-            this.ProfessionTab.Margin = new System.Windows.Forms.Padding(4);
-            this.ProfessionTab.Name = "ProfessionTab";
-            this.ProfessionTab.Padding = new System.Windows.Forms.Padding(4);
-            this.ProfessionTab.Size = new System.Drawing.Size(571, 567);
-            this.ProfessionTab.TabIndex = 2;
-            this.ProfessionTab.Text = "Professions";
-            this.ProfessionTab.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AllowUserToOrderColumns = true;
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.woWItemIDDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn1,
-            this.itemTypeDataGridViewTextBoxColumn});
-            this.dataGridView2.DataSource = this.itemsBindingSource;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(4, 4);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(563, 559);
-            this.dataGridView2.TabIndex = 0;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
-            // 
-            // itemsBindingSource
-            // 
-            this.itemsBindingSource.DataMember = "items";
-            this.itemsBindingSource.DataSource = this.wowahtPublicDataSetBindingSource;
             // 
             // serverIDDataGridViewTextBoxColumn
             // 
@@ -291,6 +161,11 @@
             this.serverPopDataGridViewTextBoxColumn.Name = "serverPopDataGridViewTextBoxColumn";
             this.serverPopDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // serverBindingSource
+            // 
+            this.serverBindingSource.DataMember = "server";
+            this.serverBindingSource.DataSource = this.wowahtPublicDataSetBindingSource;
+            // 
             // wowahtPublicDataSetBindingSource
             // 
             this.wowahtPublicDataSetBindingSource.DataSource = this.wowahtPublicDataSet;
@@ -301,21 +176,124 @@
             this.wowahtPublicDataSet.DataSetName = "wowahtPublicDataSet";
             this.wowahtPublicDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // serverTableAdapter
+            // menuStrip1
             // 
-            this.serverTableAdapter.ClearBeforeFill = true;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.helpToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(610, 28);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "topMenuStrip";
             // 
-            // itemsTableAdapter1
+            // fileToolStripMenuItem
             // 
-            this.itemsTableAdapter1.ClearBeforeFill = true;
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.quitToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(44, 24);
+            this.fileToolStripMenuItem.Text = "File";
             // 
-            // auctionsTableAdapter1
+            // quitToolStripMenuItem
             // 
-            this.auctionsTableAdapter1.ClearBeforeFill = true;
+            this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(106, 24);
+            this.quitToolStripMenuItem.Text = "Quit";
             // 
-            // auctionsTableAdapter2
+            // helpToolStripMenuItem
             // 
-            this.auctionsTableAdapter2.ClearBeforeFill = true;
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem,
+            this.readMeToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
+            this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(133, 24);
+            this.aboutToolStripMenuItem.Text = "About";
+            // 
+            // readMeToolStripMenuItem
+            // 
+            this.readMeToolStripMenuItem.Name = "readMeToolStripMenuItem";
+            this.readMeToolStripMenuItem.Size = new System.Drawing.Size(133, 24);
+            this.readMeToolStripMenuItem.Text = "ReadMe";
+            // 
+            // tabControl
+            // 
+            this.tabControl.Controls.Add(this.tabPage1);
+            this.tabControl.Controls.Add(this.tabPage2);
+            this.tabControl.Controls.Add(this.ItemsTab);
+            this.tabControl.Controls.Add(this.ServerListTab);
+            this.tabControl.Controls.Add(this.tabPage3);
+            this.tabControl.Controls.Add(this.ProfessionTab);
+            this.tabControl.Controls.Add(this.tabPage4);
+            this.tabControl.Controls.Add(this.tabPage5);
+            this.tabControl.Location = new System.Drawing.Point(18, 35);
+            this.tabControl.Margin = new System.Windows.Forms.Padding(4);
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(579, 596);
+            this.tabControl.TabIndex = 2;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(571, 567);
+            this.tabPage1.TabIndex = 3;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(571, 567);
+            this.tabPage2.TabIndex = 4;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // ItemsTab
+            // 
+            this.ItemsTab.Controls.Add(this.itemSearch);
+            this.ItemsTab.Controls.Add(this.dataGridView2);
+            this.ItemsTab.Location = new System.Drawing.Point(4, 25);
+            this.ItemsTab.Margin = new System.Windows.Forms.Padding(4);
+            this.ItemsTab.Name = "ItemsTab";
+            this.ItemsTab.Padding = new System.Windows.Forms.Padding(4);
+            this.ItemsTab.Size = new System.Drawing.Size(571, 567);
+            this.ItemsTab.TabIndex = 1;
+            this.ItemsTab.Text = "Items";
+            this.ItemsTab.UseVisualStyleBackColor = true;
+            this.ItemsTab.Click += new System.EventHandler(this.ItemsTab_Click);
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AllowUserToOrderColumns = true;
+            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.woWItemIDDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn1,
+            this.itemTypeDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.itemsBindingSource;
+            this.dataGridView2.Location = new System.Drawing.Point(4, 31);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(563, 532);
+            this.dataGridView2.TabIndex = 0;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // woWItemIDDataGridViewTextBoxColumn
             // 
@@ -341,6 +319,54 @@
             this.itemTypeDataGridViewTextBoxColumn.ReadOnly = true;
             this.itemTypeDataGridViewTextBoxColumn.Width = 175;
             // 
+            // itemsBindingSource
+            // 
+            this.itemsBindingSource.DataMember = "items";
+            this.itemsBindingSource.DataSource = this.wowahtPublicDataSetBindingSource;
+            // 
+            // ServerListTab
+            // 
+            this.ServerListTab.Controls.Add(this.ServerSearch);
+            this.ServerListTab.Controls.Add(this.dataGridView1);
+            this.ServerListTab.Location = new System.Drawing.Point(4, 25);
+            this.ServerListTab.Margin = new System.Windows.Forms.Padding(4);
+            this.ServerListTab.Name = "ServerListTab";
+            this.ServerListTab.Padding = new System.Windows.Forms.Padding(4);
+            this.ServerListTab.Size = new System.Drawing.Size(571, 567);
+            this.ServerListTab.TabIndex = 0;
+            this.ServerListTab.Text = "Servers";
+            this.ServerListTab.UseVisualStyleBackColor = true;
+            // 
+            // ServerSearch
+            // 
+            this.ServerSearch.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.ServerSearch.Location = new System.Drawing.Point(7, 3);
+            this.ServerSearch.Name = "ServerSearch";
+            this.ServerSearch.Size = new System.Drawing.Size(548, 22);
+            this.ServerSearch.TabIndex = 1;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(571, 567);
+            this.tabPage3.TabIndex = 5;
+            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // ProfessionTab
+            // 
+            this.ProfessionTab.Controls.Add(this.dataGridView3);
+            this.ProfessionTab.Location = new System.Drawing.Point(4, 25);
+            this.ProfessionTab.Margin = new System.Windows.Forms.Padding(4);
+            this.ProfessionTab.Name = "ProfessionTab";
+            this.ProfessionTab.Padding = new System.Windows.Forms.Padding(4);
+            this.ProfessionTab.Size = new System.Drawing.Size(571, 567);
+            this.ProfessionTab.TabIndex = 2;
+            this.ProfessionTab.Text = "Professions";
+            this.ProfessionTab.UseVisualStyleBackColor = true;
+            // 
             // dataGridView3
             // 
             this.dataGridView3.AllowUserToAddRows = false;
@@ -360,15 +386,6 @@
             this.dataGridView3.RowTemplate.Height = 24;
             this.dataGridView3.Size = new System.Drawing.Size(563, 559);
             this.dataGridView3.TabIndex = 0;
-            // 
-            // professionBindingSource
-            // 
-            this.professionBindingSource.DataMember = "profession";
-            this.professionBindingSource.DataSource = this.wowahtPublicDataSetBindingSource;
-            // 
-            // professionTableAdapter
-            // 
-            this.professionTableAdapter.ClearBeforeFill = true;
             // 
             // professionIDDataGridViewTextBoxColumn
             // 
@@ -394,6 +411,58 @@
             this.abbrevationDataGridViewTextBoxColumn.ReadOnly = true;
             this.abbrevationDataGridViewTextBoxColumn.Width = 175;
             // 
+            // professionBindingSource
+            // 
+            this.professionBindingSource.DataMember = "profession";
+            this.professionBindingSource.DataSource = this.wowahtPublicDataSetBindingSource;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(571, 567);
+            this.tabPage4.TabIndex = 6;
+            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(571, 567);
+            this.tabPage5.TabIndex = 7;
+            this.tabPage5.Text = "tabPage5";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // serverTableAdapter
+            // 
+            this.serverTableAdapter.ClearBeforeFill = true;
+            // 
+            // itemsTableAdapter1
+            // 
+            this.itemsTableAdapter1.ClearBeforeFill = true;
+            // 
+            // auctionsTableAdapter1
+            // 
+            this.auctionsTableAdapter1.ClearBeforeFill = true;
+            // 
+            // auctionsTableAdapter2
+            // 
+            this.auctionsTableAdapter2.ClearBeforeFill = true;
+            // 
+            // professionTableAdapter
+            // 
+            this.professionTableAdapter.ClearBeforeFill = true;
+            // 
+            // itemSearch
+            // 
+            this.itemSearch.Location = new System.Drawing.Point(7, 3);
+            this.itemSearch.Name = "itemSearch";
+            this.itemSearch.Size = new System.Drawing.Size(557, 22);
+            this.itemSearch.TabIndex = 1;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -408,17 +477,18 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.serverBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wowahtPublicDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wowahtPublicDataSet)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabControl.ResumeLayout(false);
-            this.ServerListTab.ResumeLayout(false);
-            this.ServerListTab.PerformLayout();
             this.ItemsTab.ResumeLayout(false);
-            this.ProfessionTab.ResumeLayout(false);
+            this.ItemsTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wowahtPublicDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wowahtPublicDataSet)).EndInit();
+            this.ServerListTab.ResumeLayout(false);
+            this.ServerListTab.PerformLayout();
+            this.ProfessionTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.professionBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -450,7 +520,7 @@
         private System.Windows.Forms.TabPage ServerListTab;
         private System.Windows.Forms.TabPage ItemsTab;
         private System.Windows.Forms.TabPage ProfessionTab;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox ServerSearch;
         private wowahtPublicDataSetTableAdapters.itemsTableAdapter itemsTableAdapter1;
         private wowahtPublicDataSetTableAdapters.auctionsTableAdapter auctionsTableAdapter1;
         private wowahtPublicDataSetTableAdapters.auctionsTableAdapter auctionsTableAdapter2;
@@ -465,6 +535,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn professionIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn abbrevationDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TextBox itemSearch;
     }
 }
 

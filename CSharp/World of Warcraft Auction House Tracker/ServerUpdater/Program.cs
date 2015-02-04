@@ -24,6 +24,7 @@ namespace ServerUpdater
 
             setupTempFolder();
 
+            updateAuctions(null,null);
             timer = new Timer();
             timer.Interval = 60 * 1000 * 15;
             timer.Elapsed += updateAuctions;
