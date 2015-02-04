@@ -50,10 +50,8 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.ItemsTab = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.woWItemIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.itemTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemSearch = new System.Windows.Forms.TextBox();
+            this.Items_Datagrid = new System.Windows.Forms.DataGridView();
             this.itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ServerListTab = new System.Windows.Forms.TabPage();
             this.ServerSearch = new System.Windows.Forms.TextBox();
@@ -71,7 +69,12 @@
             this.auctionsTableAdapter1 = new World_of_Warcraft_Auction_House_Tracker.wowahtPublicDataSetTableAdapters.auctionsTableAdapter();
             this.auctionsTableAdapter2 = new World_of_Warcraft_Auction_House_Tracker.wowahtPublicDataSetTableAdapters.auctionsTableAdapter();
             this.professionTableAdapter = new World_of_Warcraft_Auction_House_Tracker.wowahtPublicDataSetTableAdapters.professionTableAdapter();
-            this.itemSearch = new System.Windows.Forms.TextBox();
+            this.Items_tabSelect = new System.Windows.Forms.TabControl();
+            this.Items_SearchTab = new System.Windows.Forms.TabPage();
+            this.Items_StatsTab = new System.Windows.Forms.TabPage();
+            this.woWItemIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.itemTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serverBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wowahtPublicDataSetBindingSource)).BeginInit();
@@ -79,12 +82,14 @@
             this.menuStrip1.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.ItemsTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Items_Datagrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
             this.ServerListTab.SuspendLayout();
             this.ProfessionTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.professionBindingSource)).BeginInit();
+            this.Items_tabSelect.SuspendLayout();
+            this.Items_SearchTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -178,6 +183,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.helpToolStripMenuItem});
@@ -262,8 +268,7 @@
             // 
             // ItemsTab
             // 
-            this.ItemsTab.Controls.Add(this.itemSearch);
-            this.ItemsTab.Controls.Add(this.dataGridView2);
+            this.ItemsTab.Controls.Add(this.Items_tabSelect);
             this.ItemsTab.Location = new System.Drawing.Point(4, 25);
             this.ItemsTab.Margin = new System.Windows.Forms.Padding(4);
             this.ItemsTab.Name = "ItemsTab";
@@ -274,50 +279,36 @@
             this.ItemsTab.UseVisualStyleBackColor = true;
             this.ItemsTab.Click += new System.EventHandler(this.ItemsTab_Click);
             // 
-            // dataGridView2
+            // itemSearch
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AllowUserToOrderColumns = true;
-            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.itemSearch.Location = new System.Drawing.Point(3, 6);
+            this.itemSearch.Name = "itemSearch";
+            this.itemSearch.Size = new System.Drawing.Size(549, 22);
+            this.itemSearch.TabIndex = 1;
+            // 
+            // Items_Datagrid
+            // 
+            this.Items_Datagrid.AllowUserToAddRows = false;
+            this.Items_Datagrid.AllowUserToDeleteRows = false;
+            this.Items_Datagrid.AllowUserToOrderColumns = true;
+            this.Items_Datagrid.AutoGenerateColumns = false;
+            this.Items_Datagrid.BackgroundColor = System.Drawing.Color.Black;
+            this.Items_Datagrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.Items_Datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Items_Datagrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.woWItemIDDataGridViewTextBoxColumn,
             this.nameDataGridViewTextBoxColumn1,
             this.itemTypeDataGridViewTextBoxColumn});
-            this.dataGridView2.DataSource = this.itemsBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(4, 31);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(563, 532);
-            this.dataGridView2.TabIndex = 0;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
-            // 
-            // woWItemIDDataGridViewTextBoxColumn
-            // 
-            this.woWItemIDDataGridViewTextBoxColumn.DataPropertyName = "WoW_Item_ID";
-            this.woWItemIDDataGridViewTextBoxColumn.HeaderText = "WoW_Item_ID";
-            this.woWItemIDDataGridViewTextBoxColumn.Name = "woWItemIDDataGridViewTextBoxColumn";
-            this.woWItemIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.woWItemIDDataGridViewTextBoxColumn.Width = 175;
-            // 
-            // nameDataGridViewTextBoxColumn1
-            // 
-            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn1.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
-            this.nameDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn1.Width = 150;
-            // 
-            // itemTypeDataGridViewTextBoxColumn
-            // 
-            this.itemTypeDataGridViewTextBoxColumn.DataPropertyName = "Item_Type";
-            this.itemTypeDataGridViewTextBoxColumn.HeaderText = "Item_Type";
-            this.itemTypeDataGridViewTextBoxColumn.Name = "itemTypeDataGridViewTextBoxColumn";
-            this.itemTypeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.itemTypeDataGridViewTextBoxColumn.Width = 175;
+            this.Items_Datagrid.DataSource = this.itemsBindingSource;
+            this.Items_Datagrid.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Items_Datagrid.Location = new System.Drawing.Point(3, 34);
+            this.Items_Datagrid.Name = "Items_Datagrid";
+            this.Items_Datagrid.ReadOnly = true;
+            this.Items_Datagrid.RowHeadersVisible = false;
+            this.Items_Datagrid.RowTemplate.Height = 24;
+            this.Items_Datagrid.Size = new System.Drawing.Size(549, 493);
+            this.Items_Datagrid.TabIndex = 0;
+            this.Items_Datagrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // itemsBindingSource
             // 
@@ -456,12 +447,64 @@
             // 
             this.professionTableAdapter.ClearBeforeFill = true;
             // 
-            // itemSearch
+            // Items_tabSelect
             // 
-            this.itemSearch.Location = new System.Drawing.Point(7, 3);
-            this.itemSearch.Name = "itemSearch";
-            this.itemSearch.Size = new System.Drawing.Size(557, 22);
-            this.itemSearch.TabIndex = 1;
+            this.Items_tabSelect.Controls.Add(this.Items_SearchTab);
+            this.Items_tabSelect.Controls.Add(this.Items_StatsTab);
+            this.Items_tabSelect.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Items_tabSelect.Location = new System.Drawing.Point(4, 4);
+            this.Items_tabSelect.Name = "Items_tabSelect";
+            this.Items_tabSelect.SelectedIndex = 0;
+            this.Items_tabSelect.Size = new System.Drawing.Size(563, 559);
+            this.Items_tabSelect.TabIndex = 2;
+            // 
+            // Items_SearchTab
+            // 
+            this.Items_SearchTab.Controls.Add(this.Items_Datagrid);
+            this.Items_SearchTab.Controls.Add(this.itemSearch);
+            this.Items_SearchTab.Location = new System.Drawing.Point(4, 25);
+            this.Items_SearchTab.Name = "Items_SearchTab";
+            this.Items_SearchTab.Padding = new System.Windows.Forms.Padding(3);
+            this.Items_SearchTab.Size = new System.Drawing.Size(555, 530);
+            this.Items_SearchTab.TabIndex = 0;
+            this.Items_SearchTab.Text = "Search";
+            this.Items_SearchTab.UseVisualStyleBackColor = true;
+            // 
+            // Items_StatsTab
+            // 
+            this.Items_StatsTab.Location = new System.Drawing.Point(4, 25);
+            this.Items_StatsTab.Name = "Items_StatsTab";
+            this.Items_StatsTab.Padding = new System.Windows.Forms.Padding(3);
+            this.Items_StatsTab.Size = new System.Drawing.Size(555, 530);
+            this.Items_StatsTab.TabIndex = 1;
+            this.Items_StatsTab.Text = "Statistics";
+            this.Items_StatsTab.UseVisualStyleBackColor = true;
+            // 
+            // woWItemIDDataGridViewTextBoxColumn
+            // 
+            this.woWItemIDDataGridViewTextBoxColumn.DataPropertyName = "WoW_Item_ID";
+            this.woWItemIDDataGridViewTextBoxColumn.HeaderText = "Item ID";
+            this.woWItemIDDataGridViewTextBoxColumn.Name = "woWItemIDDataGridViewTextBoxColumn";
+            this.woWItemIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.woWItemIDDataGridViewTextBoxColumn.Width = 175;
+            // 
+            // nameDataGridViewTextBoxColumn1
+            // 
+            this.nameDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn1.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
+            this.nameDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.nameDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // itemTypeDataGridViewTextBoxColumn
+            // 
+            this.itemTypeDataGridViewTextBoxColumn.DataPropertyName = "Item_Type";
+            this.itemTypeDataGridViewTextBoxColumn.HeaderText = "Item Type";
+            this.itemTypeDataGridViewTextBoxColumn.Name = "itemTypeDataGridViewTextBoxColumn";
+            this.itemTypeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.itemTypeDataGridViewTextBoxColumn.Width = 175;
             // 
             // Form1
             // 
@@ -483,14 +526,16 @@
             this.menuStrip1.PerformLayout();
             this.tabControl.ResumeLayout(false);
             this.ItemsTab.ResumeLayout(false);
-            this.ItemsTab.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Items_Datagrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).EndInit();
             this.ServerListTab.ResumeLayout(false);
             this.ServerListTab.PerformLayout();
             this.ProfessionTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.professionBindingSource)).EndInit();
+            this.Items_tabSelect.ResumeLayout(false);
+            this.Items_SearchTab.ResumeLayout(false);
+            this.Items_SearchTab.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -524,11 +569,8 @@
         private wowahtPublicDataSetTableAdapters.itemsTableAdapter itemsTableAdapter1;
         private wowahtPublicDataSetTableAdapters.auctionsTableAdapter auctionsTableAdapter1;
         private wowahtPublicDataSetTableAdapters.auctionsTableAdapter auctionsTableAdapter2;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView Items_Datagrid;
         private System.Windows.Forms.BindingSource itemsBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn woWItemIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn itemTypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.BindingSource professionBindingSource;
         private wowahtPublicDataSetTableAdapters.professionTableAdapter professionTableAdapter;
@@ -541,6 +583,12 @@
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TextBox itemSearch;
+        private System.Windows.Forms.TabControl Items_tabSelect;
+        private System.Windows.Forms.TabPage Items_SearchTab;
+        private System.Windows.Forms.TabPage Items_StatsTab;
+        private System.Windows.Forms.DataGridViewTextBoxColumn woWItemIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn nameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemTypeDataGridViewTextBoxColumn;
     }
 }
 
