@@ -12,3 +12,10 @@ C:\Users\erexsolr\Documents\WoWAHT\CSharp\World of Warcraft Auction House Tracke
 C:\Users\erexsolr\Documents\WoWAHT\CSharp\World of Warcraft Auction House Tracker\ServerUpdater\bin\Debug\ServerUpdater.pdb
 C:\Users\erexsolr\Documents\WoWAHT\CSharp\World of Warcraft Auction House Tracker\ServerUpdater\bin\Debug\Newtonsoft.Json.dll
 C:\Users\erexsolr\Documents\WoWAHT\CSharp\World of Warcraft Auction House Tracker\ServerUpdater\obj\Debug\ServerUpdater.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\WoWAHT\CSharp\World of Warcraft Auction House Tracker\ServerUpdater\bin\Debug\ServerUpdater.exe.config
+C:\Users\Administrator\WoWAHT\CSharp\World of Warcraft Auction House Tracker\ServerUpdater\bin\Debug\ServerUpdater.exe
+C:\Users\Administrator\WoWAHT\CSharp\World of Warcraft Auction House Tracker\ServerUpdater\bin\Debug\ServerUpdater.pdb
+C:\Users\Administrator\WoWAHT\CSharp\World of Warcraft Auction House Tracker\ServerUpdater\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Administrator\WoWAHT\CSharp\World of Warcraft Auction House Tracker\ServerUpdater\obj\Debug\ServerUpdater.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\WoWAHT\CSharp\World of Warcraft Auction House Tracker\ServerUpdater\obj\Debug\ServerUpdater.exe
+C:\Users\Administrator\WoWAHT\CSharp\World of Warcraft Auction House Tracker\ServerUpdater\obj\Debug\ServerUpdater.pdb
