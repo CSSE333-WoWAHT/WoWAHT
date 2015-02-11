@@ -1,3 +1,7 @@
+-- Clean up Temp tables before starting incase script got stopped midway. Data should still be in auction_raw in that case.
+TRUNCATE TABLE memory_item_import;
+TRUNCATE TABLE memory_player_import;
+
 -- Get New Players
 INSERT INTO memory_player_import (auction_id, Player_ID, Server_ID, Player_Name, Player_Server) 
 SELECT
