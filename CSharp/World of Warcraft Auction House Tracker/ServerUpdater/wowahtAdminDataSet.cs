@@ -9,6 +9,9 @@
 }
 
 namespace ServerUpdater.wowahtAdminDataSetTableAdapters {
+    partial class itemTableAdapter
+    {
+    }
     
     
     public partial class auction_rawTableAdapter {
