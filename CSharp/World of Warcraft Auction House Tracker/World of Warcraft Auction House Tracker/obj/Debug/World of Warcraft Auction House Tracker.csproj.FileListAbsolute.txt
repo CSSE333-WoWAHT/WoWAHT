@@ -16,3 +16,12 @@ C:\Users\erexsolr\Documents\WoWAHT\CSharp\World of Warcraft Auction House Tracke
 C:\Users\erexsolr\Documents\WoWAHT\CSharp\World of Warcraft Auction House Tracker\World of Warcraft Auction House Tracker\obj\Debug\World_of_Warcraft_Auction_House_Tracker.Form1.resources
 C:\Users\erexsolr\Documents\WoWAHT\CSharp\World of Warcraft Auction House Tracker\World of Warcraft Auction House Tracker\obj\Debug\World_of_Warcraft_Auction_House_Tracker.Properties.Resources.resources
 C:\Users\erexsolr\Documents\WoWAHT\CSharp\World of Warcraft Auction House Tracker\World of Warcraft Auction House Tracker\obj\Debug\World of Warcraft Auction House Tracker.csproj.GenerateResource.Cache
+C:\Users\Administrator\WoWAHT\CSharp\World of Warcraft Auction House Tracker\World of Warcraft Auction House Tracker\bin\Debug\World of Warcraft Auction House Tracker.exe.config
+C:\Users\Administrator\WoWAHT\CSharp\World of Warcraft Auction House Tracker\World of Warcraft Auction House Tracker\obj\Debug\World of Warcraft Auction House Tracker.exe
+C:\Users\Administrator\WoWAHT\CSharp\World of Warcraft Auction House Tracker\World of Warcraft Auction House Tracker\obj\Debug\World of Warcraft Auction House Tracker.pdb
+C:\Users\Administrator\WoWAHT\CSharp\World of Warcraft Auction House Tracker\World of Warcraft Auction House Tracker\bin\Debug\World of Warcraft Auction House Tracker.exe
+C:\Users\Administrator\WoWAHT\CSharp\World of Warcraft Auction House Tracker\World of Warcraft Auction House Tracker\bin\Debug\World of Warcraft Auction House Tracker.pdb
+C:\Users\Administrator\WoWAHT\CSharp\World of Warcraft Auction House Tracker\World of Warcraft Auction House Tracker\obj\Debug\World of Warcraft Auction House Tracker.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\WoWAHT\CSharp\World of Warcraft Auction House Tracker\World of Warcraft Auction House Tracker\obj\Debug\World_of_Warcraft_Auction_House_Tracker.Form1.resources
+C:\Users\Administrator\WoWAHT\CSharp\World of Warcraft Auction House Tracker\World of Warcraft Auction House Tracker\obj\Debug\World_of_Warcraft_Auction_House_Tracker.Properties.Resources.resources
+C:\Users\Administrator\WoWAHT\CSharp\World of Warcraft Auction House Tracker\World of Warcraft Auction House Tracker\obj\Debug\World of Warcraft Auction House Tracker.csproj.GenerateResource.Cache

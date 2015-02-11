@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using World_of_Warcraft_Auction_House_Tracker.Properties;
 
 namespace World_of_Warcraft_Auction_House_Tracker
 {
     public partial class Form1 : Form
     {
+        public static MySql.Data.MySqlClient.MySqlConnection connection;
         public Form1()
         {
             InitializeComponent();
@@ -79,8 +81,71 @@ namespace World_of_Warcraft_Auction_House_Tracker
 
         private void button2_Click(object sender, EventArgs e)
         {
-            wowahtPublicDataSetTableAdapters.auctionTableAdapter ta = new wowahtPublicDataSetTableAdapters.auctionTableAdapter();
-            wowahtPublicDataSet.auctionDataTable dt = ta.GetData();
+            if (connection == null)
+            {
+                connection = new MySql.Data.MySqlClient.MySqlConnection();
+                connection.ConnectionString = Settings.Default.wowahtPublicConnectionString;
+            }
+            MySql.Data.MySqlClient.MySqlCommand command = new MySql.Data.MySqlClient.MySqlCommand("GetStatisticsForItemFromAuction", connection);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("GetItemID", ItemStatisticsID.Text));
+            command.Connection.Open();
+            MySql.Data.MySqlClient.MySqlDataReader reader;
+            reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                GlobalMedianDisplay.Text = reader["Median"].ToString();
+                GlobalMeanDisplay.Text = reader["Mean"].ToString();
+                GlobalModeDisplay.Text = reader["Mode"].ToString();
+            }
+            else
+             {
+                GlobalMedianDisplay.Text = "Invalid ID";
+                GlobalMeanDisplay.Text = "Invalid ID";
+                GlobalModeDisplay.Text = "Invalid ID";
+             }
+            reader.Close();
+            connection.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void tab_ServerStats_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ServerStatsButton_Click(object sender, EventArgs e)
+        {
+            if (connection == null)
+            {
+                connection = new MySql.Data.MySqlClient.MySqlConnection();
+                connection.ConnectionString = Settings.Default.wowahtPublicConnectionString;
+            }
+            MySql.Data.MySqlClient.MySqlCommand command = new MySql.Data.MySqlClient.MySqlCommand("GetStatisticsForServer", connection);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("GetServerID", ServerStatsTextBox.Text));
+            command.Connection.Open();
+            MySql.Data.MySqlClient.MySqlDataReader reader;
+            reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                AuctionsTodayLabel.Text = reader["NoOfAuctionsToday"].ToString();
+                AuctionsTwoWeeksLabel.Text = reader["NoOfAuctionsInLastTwoWeeks"].ToString();
+                AuctionsAllTimeLabel.Text = reader["NoOfAuctionsEver"].ToString();
+            }
+            else
+            {
+                AuctionsTodayLabel.Text = "Invalid ID";
+                AuctionsTwoWeeksLabel.Text = "Invalid ID";
+                AuctionsAllTimeLabel.Text = "Invalid ID";
+            }
+            reader.Close();
+            connection.Close();
+
         }
     }
 }
