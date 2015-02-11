@@ -21,6 +21,8 @@ namespace World_of_Warcraft_Auction_House_Tracker
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'wowahtDataSet.player' table. You can move, or remove it, as needed.
+            this.playerTableAdapter.Fill(this.wowahtDataSet.player);
             // TODO: This line of code loads data into the 'wowahtPublicDataSet.profession' table. You can move, or remove it, as needed.
             this.professionTableAdapter.Fill(this.wowahtPublicDataSet.profession);
             // TODO: This line of code loads data into the 'wowahtPublicDataSet.server' table. You can move, or remove it, as needed.
@@ -69,11 +71,6 @@ namespace World_of_Warcraft_Auction_House_Tracker
             (Servers_DataGrid.DataSource as BindingSource).Filter = string.Format("Name Like '{0}*'", ServerSearchTextBox.Text.Replace("'", "''"));
         }
 
-        private void Servers_DataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void Servers_SearchLabel_Click(object sender, EventArgs e)
         {
 
@@ -97,20 +94,63 @@ namespace World_of_Warcraft_Auction_House_Tracker
                 GlobalMedianDisplay.Text = reader["Median"].ToString();
                 GlobalMeanDisplay.Text = reader["Mean"].ToString();
                 GlobalModeDisplay.Text = reader["Mode"].ToString();
+                GlobalStDevDisplay.Text = reader["Std. Deviation"].ToString();
+                MerchantBuyLabel.Text = reader["Buy_Price"].ToString();
+                if (MerchantBuyLabel.Text == "0")
+                    MerchantBuyLabel.Text = "Unavailable";
+                MerchantSellLabel.Text = reader["Sell_Price"].ToString();
             }
             else
              {
                 GlobalMedianDisplay.Text = "Invalid ID";
                 GlobalMeanDisplay.Text = "Invalid ID";
                 GlobalModeDisplay.Text = "Invalid ID";
+                GlobalStDevDisplay.Text = "Invalid ID";
+                MerchantBuyLabel.Text = "Invalid ID";
+                MerchantSellLabel.Text = "Invalid ID";
              }
             reader.Close();
+            MySql.Data.MySqlClient.MySqlCommand command2 = new MySql.Data.MySqlClient.MySqlCommand("GetRecipesForItem", connection);
+            command2.CommandType = CommandType.StoredProcedure;
+            command2.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("GetItemID", ItemStatisticsID.Text));
+            DataTable dt = new DataTable();
+            dt.Load(command2.ExecuteReader(), LoadOption.OverwriteChanges);
+            ItemRecipesGrid.DataSource = dt;
             connection.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void Servers_DataGrid_CellContentClick (object sender, DataGridViewCellEventArgs e)
+        {
+            var senderGrid = (DataGridView)sender;
+
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                e.RowIndex >= 0)
+            {
+                //TODO - Button Clicked - Execute Code Here
+                tabControl1.SelectedTab = tab_ServerStats;
+                ServerStatsTextBox.Text = Servers_DataGrid.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                ServerStatsButton_Click(null, null);
+            }
+        }
+
+        private void PlayersDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var senderGrid = (DataGridView)sender;
+
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                e.RowIndex >= 0)
+            {
+                //TODO - Button Clicked - Execute Code Here
+                PlayersTabs.SelectedTab = PlayerStatsTab;
+                UsernameSearchBox.Text = PlayersDataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                PlayerStatsServer.Text = PlayersDataGridView.Rows[e.RowIndex].Cells["serverIDDataGridViewTextBoxColumn1"].Value.ToString();
+                UsernameSearchButton_Click(null, null);
+            }
         }
 
         private void tab_ServerStats_Click(object sender, EventArgs e)
@@ -127,7 +167,7 @@ namespace World_of_Warcraft_Auction_House_Tracker
             }
             MySql.Data.MySqlClient.MySqlCommand command = new MySql.Data.MySqlClient.MySqlCommand("GetStatisticsForServer", connection);
             command.CommandType = CommandType.StoredProcedure;
-            command.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("GetServerID", ServerStatsTextBox.Text));
+            command.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("GetServerName", ServerStatsTextBox.Text));
             command.Connection.Open();
             MySql.Data.MySqlClient.MySqlDataReader reader;
             reader = command.ExecuteReader();
@@ -146,6 +186,74 @@ namespace World_of_Warcraft_Auction_House_Tracker
             reader.Close();
             connection.Close();
 
+        }
+
+        private void ItemsServerIDButton_Click(object sender, EventArgs e)
+        {
+            if (connection == null)
+            {
+                connection = new MySql.Data.MySqlClient.MySqlConnection();
+                connection.ConnectionString = Settings.Default.wowahtPublicConnectionString;
+            }
+            MySql.Data.MySqlClient.MySqlCommand command = new MySql.Data.MySqlClient.MySqlCommand("GetStatisticsForItemForServer", connection);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("GetItemID", ItemStatisticsID.Text));
+            command.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("GetServerName", ItemStatsServerBox.Text));
+            command.Connection.Open();
+            MySql.Data.MySqlClient.MySqlDataReader reader;
+            reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                ServerMedianDisplay.Text = reader["Median"].ToString();
+                ServerMeanDisplay.Text = reader["Mean"].ToString();
+                ServerModeDisplay.Text = reader["Mode"].ToString();
+                ServerStDevDisplay.Text = reader["Std. Deviation"].ToString();
+            }
+            else
+            {
+                ServerMedianDisplay.Text = "Invalid ID";
+                ServerMeanDisplay.Text = "Invalid ID";
+                ServerModeDisplay.Text = "Invalid ID";
+                ServerStDevDisplay.Text = "Invalid ID";
+            }
+            reader.Close();
+            connection.Close();
+
+        }
+
+        private void quitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void UsernameSearchButton_Click(object sender, EventArgs e)
+        {
+            if (connection == null)
+            {
+                connection = new MySql.Data.MySqlClient.MySqlConnection();
+                connection.ConnectionString = Settings.Default.wowahtPublicConnectionString;
+            }
+            MySql.Data.MySqlClient.MySqlCommand command = new MySql.Data.MySqlClient.MySqlCommand("GetStatisticsForPlayer", connection);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("GetPlayerName", UsernameSearchBox.Text));
+            command.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("GetServerID", PlayerStatsServer.Text));
+            command.Connection.Open();
+            MySql.Data.MySqlClient.MySqlDataReader reader;
+            reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                PlayerAuctionsTodayLabel.Text = reader["NoOfAuctionsToday"].ToString();
+                PlayerAuctionsTwoWeeksLabel.Text = reader["NoOfAuctionsInLastTwoWeeks"].ToString();
+                PlayerAuctionsAllTimeLabel.Text = reader["NoOfAuctionsEver"].ToString();
+            }
+            else
+            {
+                PlayerAuctionsTodayLabel.Text = "Invalid ID";
+                PlayerAuctionsTwoWeeksLabel.Text = "Invalid ID";
+                PlayerAuctionsAllTimeLabel.Text = "Invalid ID";
+            }
+            reader.Close();
+            connection.Close();
         }
     }
 }

@@ -75,6 +75,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="wowahtDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wowahtDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="wowahtDataSet1.cs">
+      <DependentUpon>wowahtDataSet1.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="wowahtDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wowahtDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="wowahtPublicDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -101,6 +115,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="wowahtDataSet.xsc">
+      <DependentUpon>wowahtDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="wowahtDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>wowahtDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="wowahtDataSet.xss">
+      <DependentUpon>wowahtDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="wowahtDataSet1.xsc">
+      <DependentUpon>wowahtDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="wowahtDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>wowahtDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="wowahtDataSet1.xss">
+      <DependentUpon>wowahtDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="wowahtPublicDataSet.xsc">
       <DependentUpon>wowahtPublicDataSet.xsd</DependentUpon>
     </None>

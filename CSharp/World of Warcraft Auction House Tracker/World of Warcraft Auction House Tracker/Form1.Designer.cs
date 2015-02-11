@@ -47,8 +47,8 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.readMeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.OverviewTab = new System.Windows.Forms.TabPage();
+            this.AuctionsTab = new System.Windows.Forms.TabPage();
             this.ItemsTab = new System.Windows.Forms.TabPage();
             this.Items_tabSelect = new System.Windows.Forms.TabControl();
             this.Items_SearchTab = new System.Windows.Forms.TabPage();
@@ -60,7 +60,15 @@
             this.itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.itemSearch = new System.Windows.Forms.TextBox();
             this.Items_StatsTab = new System.Windows.Forms.TabPage();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.ItemsServerIDButton = new System.Windows.Forms.Button();
+            this.ServerStDevDisplay = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.St = new System.Windows.Forms.Label();
+            this.GlobalStDevDisplay = new System.Windows.Forms.Label();
+            this.ServerMedianDisplay = new System.Windows.Forms.Label();
+            this.ServerMeanDisplay = new System.Windows.Forms.Label();
+            this.ServerModeDisplay = new System.Windows.Forms.Label();
+            this.ItemStatsServerBox = new System.Windows.Forms.TextBox();
             this.GlobalModeDisplay = new System.Windows.Forms.Label();
             this.GlobalMeanDisplay = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -85,20 +93,57 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.AuctionsTodayLabel = new System.Windows.Forms.Label();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.PlayersTab = new System.Windows.Forms.TabPage();
+            this.PlayersTabs = new System.Windows.Forms.TabControl();
+            this.PlayerSearchTab = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.PlayersDataGridView = new System.Windows.Forms.DataGridView();
+            this.playerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastUpdatedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.serverIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstProfessionIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.secondProfessionIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.playerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.wowahtDataSet = new World_of_Warcraft_Auction_House_Tracker.wowahtDataSet();
+            this.PlayerStatsTab = new System.Windows.Forms.TabPage();
+            this.PlayerStatsButton = new System.Windows.Forms.Button();
+            this.UsernameSearchBox = new System.Windows.Forms.TextBox();
+            this.UsernameLabel = new System.Windows.Forms.Label();
             this.ProfessionTab = new System.Windows.Forms.TabPage();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.professionIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.abbrevationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.professionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.SearchTab = new System.Windows.Forms.TabPage();
+            this.RawTab = new System.Windows.Forms.TabPage();
             this.serverTableAdapter = new World_of_Warcraft_Auction_House_Tracker.wowahtPublicDataSetTableAdapters.serverTableAdapter();
             this.itemsTableAdapter1 = new World_of_Warcraft_Auction_House_Tracker.wowahtPublicDataSetTableAdapters.itemsTableAdapter();
             this.auctionsTableAdapter1 = new World_of_Warcraft_Auction_House_Tracker.wowahtPublicDataSetTableAdapters.auctionsTableAdapter();
             this.auctionsTableAdapter2 = new World_of_Warcraft_Auction_House_Tracker.wowahtPublicDataSetTableAdapters.auctionsTableAdapter();
             this.professionTableAdapter = new World_of_Warcraft_Auction_House_Tracker.wowahtPublicDataSetTableAdapters.professionTableAdapter();
+            this.playerTableAdapter = new World_of_Warcraft_Auction_House_Tracker.wowahtDataSetTableAdapters.playerTableAdapter();
+            this.PlayerAuctionsAllTimeLabel = new System.Windows.Forms.Label();
+            this.PlayerAuctionsTwoWeeksLabel = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.PlayerAuctionsTodayLabel = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.PlayersServerSearch = new System.Windows.Forms.TextBox();
+            this.PSS = new System.Windows.Forms.Label();
+            this.PlayerStatsServer = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.MerchantBuyLabel = new System.Windows.Forms.Label();
+            this.MerchantSellLabel = new System.Windows.Forms.Label();
+            this.wowahtDataSet1 = new World_of_Warcraft_Auction_House_Tracker.wowahtDataSet1();
+            this.wowahtDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ItemRecipesGrid = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.Servers_DataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serverBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wowahtPublicDataSetBindingSource)).BeginInit();
@@ -115,9 +160,19 @@
             this.tabControl1.SuspendLayout();
             this.tab_ServerSearch.SuspendLayout();
             this.tab_ServerStats.SuspendLayout();
+            this.PlayersTab.SuspendLayout();
+            this.PlayersTabs.SuspendLayout();
+            this.PlayerSearchTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PlayersDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wowahtDataSet)).BeginInit();
+            this.PlayerStatsTab.SuspendLayout();
             this.ProfessionTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.professionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wowahtDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wowahtDataSet1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemRecipesGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // Servers_DataGrid
@@ -125,6 +180,7 @@
             this.Servers_DataGrid.AllowUserToAddRows = false;
             this.Servers_DataGrid.AllowUserToDeleteRows = false;
             this.Servers_DataGrid.AllowUserToOrderColumns = true;
+            this.Servers_DataGrid.AllowUserToResizeRows = false;
             this.Servers_DataGrid.AutoGenerateColumns = false;
             this.Servers_DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Servers_DataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -243,6 +299,7 @@
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
             this.quitToolStripMenuItem.Size = new System.Drawing.Size(106, 24);
             this.quitToolStripMenuItem.Text = "Quit";
+            this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -267,14 +324,14 @@
             // 
             // tabControl
             // 
-            this.tabControl.Controls.Add(this.tabPage1);
-            this.tabControl.Controls.Add(this.tabPage2);
+            this.tabControl.Controls.Add(this.OverviewTab);
+            this.tabControl.Controls.Add(this.AuctionsTab);
             this.tabControl.Controls.Add(this.ItemsTab);
             this.tabControl.Controls.Add(this.ServerListTab);
-            this.tabControl.Controls.Add(this.tabPage3);
+            this.tabControl.Controls.Add(this.PlayersTab);
             this.tabControl.Controls.Add(this.ProfessionTab);
-            this.tabControl.Controls.Add(this.tabPage4);
-            this.tabControl.Controls.Add(this.tabPage5);
+            this.tabControl.Controls.Add(this.SearchTab);
+            this.tabControl.Controls.Add(this.RawTab);
             this.tabControl.Location = new System.Drawing.Point(18, 35);
             this.tabControl.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl.Name = "tabControl";
@@ -282,25 +339,25 @@
             this.tabControl.Size = new System.Drawing.Size(579, 596);
             this.tabControl.TabIndex = 2;
             // 
-            // tabPage1
+            // OverviewTab
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(571, 567);
-            this.tabPage1.TabIndex = 3;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.OverviewTab.Location = new System.Drawing.Point(4, 25);
+            this.OverviewTab.Name = "OverviewTab";
+            this.OverviewTab.Padding = new System.Windows.Forms.Padding(3);
+            this.OverviewTab.Size = new System.Drawing.Size(571, 567);
+            this.OverviewTab.TabIndex = 3;
+            this.OverviewTab.Text = "Overview";
+            this.OverviewTab.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // AuctionsTab
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(571, 567);
-            this.tabPage2.TabIndex = 4;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.AuctionsTab.Location = new System.Drawing.Point(4, 25);
+            this.AuctionsTab.Name = "AuctionsTab";
+            this.AuctionsTab.Padding = new System.Windows.Forms.Padding(3);
+            this.AuctionsTab.Size = new System.Drawing.Size(571, 567);
+            this.AuctionsTab.TabIndex = 4;
+            this.AuctionsTab.Text = "Auctions";
+            this.AuctionsTab.UseVisualStyleBackColor = true;
             // 
             // ItemsTab
             // 
@@ -412,7 +469,22 @@
             // 
             // Items_StatsTab
             // 
-            this.Items_StatsTab.Controls.Add(this.textBox3);
+            this.Items_StatsTab.Controls.Add(this.MerchantSellLabel);
+            this.Items_StatsTab.Controls.Add(this.MerchantBuyLabel);
+            this.Items_StatsTab.Controls.Add(this.label16);
+            this.Items_StatsTab.Controls.Add(this.label14);
+            this.Items_StatsTab.Controls.Add(this.ItemRecipesGrid);
+            this.Items_StatsTab.Controls.Add(this.label13);
+            this.Items_StatsTab.Controls.Add(this.label11);
+            this.Items_StatsTab.Controls.Add(this.ItemsServerIDButton);
+            this.Items_StatsTab.Controls.Add(this.ServerStDevDisplay);
+            this.Items_StatsTab.Controls.Add(this.label15);
+            this.Items_StatsTab.Controls.Add(this.St);
+            this.Items_StatsTab.Controls.Add(this.GlobalStDevDisplay);
+            this.Items_StatsTab.Controls.Add(this.ServerMedianDisplay);
+            this.Items_StatsTab.Controls.Add(this.ServerMeanDisplay);
+            this.Items_StatsTab.Controls.Add(this.ServerModeDisplay);
+            this.Items_StatsTab.Controls.Add(this.ItemStatsServerBox);
             this.Items_StatsTab.Controls.Add(this.GlobalModeDisplay);
             this.Items_StatsTab.Controls.Add(this.GlobalMeanDisplay);
             this.Items_StatsTab.Controls.Add(this.label8);
@@ -430,18 +502,93 @@
             this.Items_StatsTab.Text = "Statistics";
             this.Items_StatsTab.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // ItemsServerIDButton
             // 
-            this.textBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textBox3.Location = new System.Drawing.Point(209, 160);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 18;
+            this.ItemsServerIDButton.AutoSize = true;
+            this.ItemsServerIDButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ItemsServerIDButton.Location = new System.Drawing.Point(512, 7);
+            this.ItemsServerIDButton.Name = "ItemsServerIDButton";
+            this.ItemsServerIDButton.Size = new System.Drawing.Size(37, 27);
+            this.ItemsServerIDButton.TabIndex = 30;
+            this.ItemsServerIDButton.Text = "Go";
+            this.ItemsServerIDButton.UseVisualStyleBackColor = true;
+            this.ItemsServerIDButton.Click += new System.EventHandler(this.ItemsServerIDButton_Click);
+            // 
+            // ServerStDevDisplay
+            // 
+            this.ServerStDevDisplay.AutoSize = true;
+            this.ServerStDevDisplay.Location = new System.Drawing.Point(436, 151);
+            this.ServerStDevDisplay.Name = "ServerStDevDisplay";
+            this.ServerStDevDisplay.Size = new System.Drawing.Size(82, 17);
+            this.ServerStDevDisplay.TabIndex = 27;
+            this.ServerStDevDisplay.Text = "Unavailable";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(322, 12);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(91, 17);
+            this.label15.TabIndex = 25;
+            this.label15.Text = "Server Name";
+            // 
+            // St
+            // 
+            this.St.AutoSize = true;
+            this.St.Location = new System.Drawing.Point(9, 151);
+            this.St.Name = "St";
+            this.St.Size = new System.Drawing.Size(133, 17);
+            this.St.TabIndex = 23;
+            this.St.Text = "Standard Deviation:";
+            // 
+            // GlobalStDevDisplay
+            // 
+            this.GlobalStDevDisplay.AutoSize = true;
+            this.GlobalStDevDisplay.Location = new System.Drawing.Point(157, 151);
+            this.GlobalStDevDisplay.Name = "GlobalStDevDisplay";
+            this.GlobalStDevDisplay.Size = new System.Drawing.Size(82, 17);
+            this.GlobalStDevDisplay.TabIndex = 22;
+            this.GlobalStDevDisplay.Text = "Unavailable";
+            // 
+            // ServerMedianDisplay
+            // 
+            this.ServerMedianDisplay.AutoSize = true;
+            this.ServerMedianDisplay.Location = new System.Drawing.Point(436, 65);
+            this.ServerMedianDisplay.Name = "ServerMedianDisplay";
+            this.ServerMedianDisplay.Size = new System.Drawing.Size(82, 17);
+            this.ServerMedianDisplay.TabIndex = 21;
+            this.ServerMedianDisplay.Text = "Unavailable";
+            // 
+            // ServerMeanDisplay
+            // 
+            this.ServerMeanDisplay.AutoSize = true;
+            this.ServerMeanDisplay.Location = new System.Drawing.Point(436, 94);
+            this.ServerMeanDisplay.Name = "ServerMeanDisplay";
+            this.ServerMeanDisplay.Size = new System.Drawing.Size(82, 17);
+            this.ServerMeanDisplay.TabIndex = 20;
+            this.ServerMeanDisplay.Text = "Unavailable";
+            // 
+            // ServerModeDisplay
+            // 
+            this.ServerModeDisplay.AutoSize = true;
+            this.ServerModeDisplay.Location = new System.Drawing.Point(436, 122);
+            this.ServerModeDisplay.Name = "ServerModeDisplay";
+            this.ServerModeDisplay.Size = new System.Drawing.Size(82, 17);
+            this.ServerModeDisplay.TabIndex = 19;
+            this.ServerModeDisplay.Text = "Unavailable";
+            // 
+            // ItemStatsServerBox
+            // 
+            this.ItemStatsServerBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.ItemStatsServerBox.Location = new System.Drawing.Point(419, 9);
+            this.ItemStatsServerBox.Name = "ItemStatsServerBox";
+            this.ItemStatsServerBox.Size = new System.Drawing.Size(87, 22);
+            this.ItemStatsServerBox.TabIndex = 18;
             // 
             // GlobalModeDisplay
             // 
             this.GlobalModeDisplay.AutoSize = true;
-            this.GlobalModeDisplay.Location = new System.Drawing.Point(176, 119);
+            this.GlobalModeDisplay.Location = new System.Drawing.Point(157, 122);
             this.GlobalModeDisplay.Name = "GlobalModeDisplay";
             this.GlobalModeDisplay.Size = new System.Drawing.Size(82, 17);
             this.GlobalModeDisplay.TabIndex = 16;
@@ -450,7 +597,7 @@
             // GlobalMeanDisplay
             // 
             this.GlobalMeanDisplay.AutoSize = true;
-            this.GlobalMeanDisplay.Location = new System.Drawing.Point(176, 84);
+            this.GlobalMeanDisplay.Location = new System.Drawing.Point(157, 94);
             this.GlobalMeanDisplay.Name = "GlobalMeanDisplay";
             this.GlobalMeanDisplay.Size = new System.Drawing.Size(82, 17);
             this.GlobalMeanDisplay.TabIndex = 15;
@@ -459,25 +606,25 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(9, 119);
+            this.label8.Location = new System.Drawing.Point(9, 122);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(150, 17);
+            this.label8.Size = new System.Drawing.Size(95, 17);
             this.label8.TabIndex = 14;
-            this.label8.Text = "Mode Buyout (Global):";
+            this.label8.Text = "Mode Buyout:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(9, 84);
+            this.label7.Location = new System.Drawing.Point(9, 94);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(150, 17);
+            this.label7.Size = new System.Drawing.Size(95, 17);
             this.label7.TabIndex = 13;
-            this.label7.Text = "Mean Buyout (Global):";
+            this.label7.Text = "Mean Buyout:";
             // 
             // GlobalMedianDisplay
             // 
             this.GlobalMedianDisplay.AutoSize = true;
-            this.GlobalMedianDisplay.Location = new System.Drawing.Point(176, 50);
+            this.GlobalMedianDisplay.Location = new System.Drawing.Point(157, 65);
             this.GlobalMedianDisplay.Name = "GlobalMedianDisplay";
             this.GlobalMedianDisplay.Size = new System.Drawing.Size(82, 17);
             this.GlobalMedianDisplay.TabIndex = 12;
@@ -486,17 +633,17 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 50);
+            this.label5.Location = new System.Drawing.Point(9, 65);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(161, 17);
+            this.label5.Size = new System.Drawing.Size(106, 17);
             this.label5.TabIndex = 11;
-            this.label5.Text = "Median Buyout (Global):";
+            this.label5.Text = "Median Buyout:";
             // 
             // button2
             // 
             this.button2.AutoSize = true;
             this.button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button2.Location = new System.Drawing.Point(315, 3);
+            this.button2.Location = new System.Drawing.Point(173, 6);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(37, 27);
             this.button2.TabIndex = 10;
@@ -506,7 +653,7 @@
             // 
             // ItemStatisticsID
             // 
-            this.ItemStatisticsID.Location = new System.Drawing.Point(209, 6);
+            this.ItemStatisticsID.Location = new System.Drawing.Point(67, 9);
             this.ItemStatisticsID.Name = "ItemStatisticsID";
             this.ItemStatisticsID.Size = new System.Drawing.Size(100, 22);
             this.ItemStatisticsID.TabIndex = 9;
@@ -514,7 +661,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(148, 9);
+            this.label6.Location = new System.Drawing.Point(6, 12);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 17);
             this.label6.TabIndex = 8;
@@ -635,11 +782,11 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(97, 8);
+            this.label9.Location = new System.Drawing.Point(73, 9);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(67, 17);
+            this.label9.Size = new System.Drawing.Size(91, 17);
             this.label9.TabIndex = 4;
-            this.label9.Text = "Server ID";
+            this.label9.Text = "Server Name";
             // 
             // label4
             // 
@@ -677,15 +824,180 @@
             this.AuctionsTodayLabel.TabIndex = 0;
             this.AuctionsTodayLabel.Text = "Unavailble";
             // 
-            // tabPage3
+            // PlayersTab
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(571, 567);
-            this.tabPage3.TabIndex = 5;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.PlayersTab.Controls.Add(this.PlayersTabs);
+            this.PlayersTab.Location = new System.Drawing.Point(4, 25);
+            this.PlayersTab.Name = "PlayersTab";
+            this.PlayersTab.Padding = new System.Windows.Forms.Padding(3);
+            this.PlayersTab.Size = new System.Drawing.Size(571, 567);
+            this.PlayersTab.TabIndex = 5;
+            this.PlayersTab.Text = "Players";
+            this.PlayersTab.UseVisualStyleBackColor = true;
+            // 
+            // PlayersTabs
+            // 
+            this.PlayersTabs.Controls.Add(this.PlayerSearchTab);
+            this.PlayersTabs.Controls.Add(this.PlayerStatsTab);
+            this.PlayersTabs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PlayersTabs.Location = new System.Drawing.Point(3, 3);
+            this.PlayersTabs.Name = "PlayersTabs";
+            this.PlayersTabs.SelectedIndex = 0;
+            this.PlayersTabs.Size = new System.Drawing.Size(565, 561);
+            this.PlayersTabs.TabIndex = 0;
+            // 
+            // PlayerSearchTab
+            // 
+            this.PlayerSearchTab.Controls.Add(this.PlayersServerSearch);
+            this.PlayerSearchTab.Controls.Add(this.label10);
+            this.PlayerSearchTab.Controls.Add(this.label1);
+            this.PlayerSearchTab.Controls.Add(this.textBox1);
+            this.PlayerSearchTab.Controls.Add(this.PlayersDataGridView);
+            this.PlayerSearchTab.Location = new System.Drawing.Point(4, 25);
+            this.PlayerSearchTab.Name = "PlayerSearchTab";
+            this.PlayerSearchTab.Padding = new System.Windows.Forms.Padding(3);
+            this.PlayerSearchTab.Size = new System.Drawing.Size(557, 532);
+            this.PlayerSearchTab.TabIndex = 0;
+            this.PlayerSearchTab.Text = "Search";
+            this.PlayerSearchTab.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 17);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Username:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(89, 6);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(192, 22);
+            this.textBox1.TabIndex = 1;
+            // 
+            // PlayersDataGridView
+            // 
+            this.PlayersDataGridView.AutoGenerateColumns = false;
+            this.PlayersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.PlayersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.playerIDDataGridViewTextBoxColumn,
+            this.lastUpdatedDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn3,
+            this.serverIDDataGridViewTextBoxColumn1,
+            this.firstProfessionIDDataGridViewTextBoxColumn,
+            this.secondProfessionIDDataGridViewTextBoxColumn});
+            this.PlayersDataGridView.DataSource = this.playerBindingSource;
+            this.PlayersDataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.PlayersDataGridView.Location = new System.Drawing.Point(3, 34);
+            this.PlayersDataGridView.Name = "PlayersDataGridView";
+            this.PlayersDataGridView.RowHeadersVisible = false;
+            this.PlayersDataGridView.RowTemplate.Height = 24;
+            this.PlayersDataGridView.Size = new System.Drawing.Size(551, 495);
+            this.PlayersDataGridView.TabIndex = 0;
+            this.PlayersDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PlayersDataGridView_CellContentClick);
+            // 
+            // playerIDDataGridViewTextBoxColumn
+            // 
+            this.playerIDDataGridViewTextBoxColumn.DataPropertyName = "Player_ID";
+            this.playerIDDataGridViewTextBoxColumn.HeaderText = "Player_ID";
+            this.playerIDDataGridViewTextBoxColumn.Name = "playerIDDataGridViewTextBoxColumn";
+            this.playerIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // lastUpdatedDataGridViewTextBoxColumn
+            // 
+            this.lastUpdatedDataGridViewTextBoxColumn.DataPropertyName = "Last_Updated";
+            this.lastUpdatedDataGridViewTextBoxColumn.HeaderText = "Last Update";
+            this.lastUpdatedDataGridViewTextBoxColumn.Name = "lastUpdatedDataGridViewTextBoxColumn";
+            // 
+            // nameDataGridViewTextBoxColumn3
+            // 
+            this.nameDataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.nameDataGridViewTextBoxColumn3.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn3.HeaderText = "Username";
+            this.nameDataGridViewTextBoxColumn3.Name = "nameDataGridViewTextBoxColumn3";
+            this.nameDataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.nameDataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.nameDataGridViewTextBoxColumn3.Width = 98;
+            // 
+            // serverIDDataGridViewTextBoxColumn1
+            // 
+            this.serverIDDataGridViewTextBoxColumn1.DataPropertyName = "Server_ID";
+            this.serverIDDataGridViewTextBoxColumn1.HeaderText = "Server_ID";
+            this.serverIDDataGridViewTextBoxColumn1.Name = "serverIDDataGridViewTextBoxColumn1";
+            this.serverIDDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // firstProfessionIDDataGridViewTextBoxColumn
+            // 
+            this.firstProfessionIDDataGridViewTextBoxColumn.DataPropertyName = "First_Profession_ID";
+            this.firstProfessionIDDataGridViewTextBoxColumn.HeaderText = "First Profession";
+            this.firstProfessionIDDataGridViewTextBoxColumn.Name = "firstProfessionIDDataGridViewTextBoxColumn";
+            // 
+            // secondProfessionIDDataGridViewTextBoxColumn
+            // 
+            this.secondProfessionIDDataGridViewTextBoxColumn.DataPropertyName = "Second_Profession_ID";
+            this.secondProfessionIDDataGridViewTextBoxColumn.HeaderText = "Second Profession";
+            this.secondProfessionIDDataGridViewTextBoxColumn.Name = "secondProfessionIDDataGridViewTextBoxColumn";
+            // 
+            // playerBindingSource
+            // 
+            this.playerBindingSource.DataMember = "player";
+            this.playerBindingSource.DataSource = this.wowahtDataSet;
+            // 
+            // wowahtDataSet
+            // 
+            this.wowahtDataSet.DataSetName = "wowahtDataSet";
+            this.wowahtDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // PlayerStatsTab
+            // 
+            this.PlayerStatsTab.Controls.Add(this.PlayerStatsServer);
+            this.PlayerStatsTab.Controls.Add(this.PSS);
+            this.PlayerStatsTab.Controls.Add(this.PlayerAuctionsTodayLabel);
+            this.PlayerStatsTab.Controls.Add(this.label19);
+            this.PlayerStatsTab.Controls.Add(this.label18);
+            this.PlayerStatsTab.Controls.Add(this.label12);
+            this.PlayerStatsTab.Controls.Add(this.PlayerAuctionsTwoWeeksLabel);
+            this.PlayerStatsTab.Controls.Add(this.PlayerAuctionsAllTimeLabel);
+            this.PlayerStatsTab.Controls.Add(this.PlayerStatsButton);
+            this.PlayerStatsTab.Controls.Add(this.UsernameSearchBox);
+            this.PlayerStatsTab.Controls.Add(this.UsernameLabel);
+            this.PlayerStatsTab.Location = new System.Drawing.Point(4, 25);
+            this.PlayerStatsTab.Name = "PlayerStatsTab";
+            this.PlayerStatsTab.Padding = new System.Windows.Forms.Padding(3);
+            this.PlayerStatsTab.Size = new System.Drawing.Size(557, 532);
+            this.PlayerStatsTab.TabIndex = 1;
+            this.PlayerStatsTab.Text = "Statistics";
+            this.PlayerStatsTab.UseVisualStyleBackColor = true;
+            // 
+            // PlayerStatsButton
+            // 
+            this.PlayerStatsButton.AutoSize = true;
+            this.PlayerStatsButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.PlayerStatsButton.Location = new System.Drawing.Point(414, 3);
+            this.PlayerStatsButton.Name = "PlayerStatsButton";
+            this.PlayerStatsButton.Size = new System.Drawing.Size(37, 27);
+            this.PlayerStatsButton.TabIndex = 2;
+            this.PlayerStatsButton.Text = "Go";
+            this.PlayerStatsButton.UseVisualStyleBackColor = true;
+            this.PlayerStatsButton.Click += new System.EventHandler(this.UsernameSearchButton_Click);
+            // 
+            // UsernameSearchBox
+            // 
+            this.UsernameSearchBox.Location = new System.Drawing.Point(142, 6);
+            this.UsernameSearchBox.Name = "UsernameSearchBox";
+            this.UsernameSearchBox.Size = new System.Drawing.Size(100, 22);
+            this.UsernameSearchBox.TabIndex = 1;
+            // 
+            // UsernameLabel
+            // 
+            this.UsernameLabel.AutoSize = true;
+            this.UsernameLabel.Location = new System.Drawing.Point(59, 9);
+            this.UsernameLabel.Name = "UsernameLabel";
+            this.UsernameLabel.Size = new System.Drawing.Size(77, 17);
+            this.UsernameLabel.TabIndex = 0;
+            this.UsernameLabel.Text = "Username:";
             // 
             // ProfessionTab
             // 
@@ -748,25 +1060,25 @@
             this.professionBindingSource.DataMember = "profession";
             this.professionBindingSource.DataSource = this.wowahtPublicDataSetBindingSource;
             // 
-            // tabPage4
+            // SearchTab
             // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(571, 567);
-            this.tabPage4.TabIndex = 6;
-            this.tabPage4.Text = "tabPage4";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.SearchTab.Location = new System.Drawing.Point(4, 25);
+            this.SearchTab.Name = "SearchTab";
+            this.SearchTab.Padding = new System.Windows.Forms.Padding(3);
+            this.SearchTab.Size = new System.Drawing.Size(571, 567);
+            this.SearchTab.TabIndex = 6;
+            this.SearchTab.Text = "Search";
+            this.SearchTab.UseVisualStyleBackColor = true;
             // 
-            // tabPage5
+            // RawTab
             // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 25);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(571, 567);
-            this.tabPage5.TabIndex = 7;
-            this.tabPage5.Text = "tabPage5";
-            this.tabPage5.UseVisualStyleBackColor = true;
+            this.RawTab.Location = new System.Drawing.Point(4, 25);
+            this.RawTab.Name = "RawTab";
+            this.RawTab.Padding = new System.Windows.Forms.Padding(3);
+            this.RawTab.Size = new System.Drawing.Size(571, 567);
+            this.RawTab.TabIndex = 7;
+            this.RawTab.Text = "Raw";
+            this.RawTab.UseVisualStyleBackColor = true;
             // 
             // serverTableAdapter
             // 
@@ -787,6 +1099,170 @@
             // professionTableAdapter
             // 
             this.professionTableAdapter.ClearBeforeFill = true;
+            // 
+            // playerTableAdapter
+            // 
+            this.playerTableAdapter.ClearBeforeFill = true;
+            // 
+            // PlayerAuctionsAllTimeLabel
+            // 
+            this.PlayerAuctionsAllTimeLabel.AutoSize = true;
+            this.PlayerAuctionsAllTimeLabel.Location = new System.Drawing.Point(227, 131);
+            this.PlayerAuctionsAllTimeLabel.Name = "PlayerAuctionsAllTimeLabel";
+            this.PlayerAuctionsAllTimeLabel.Size = new System.Drawing.Size(82, 17);
+            this.PlayerAuctionsAllTimeLabel.TabIndex = 3;
+            this.PlayerAuctionsAllTimeLabel.Text = "Unavailable";
+            // 
+            // PlayerAuctionsTwoWeeksLabel
+            // 
+            this.PlayerAuctionsTwoWeeksLabel.AutoSize = true;
+            this.PlayerAuctionsTwoWeeksLabel.Location = new System.Drawing.Point(227, 97);
+            this.PlayerAuctionsTwoWeeksLabel.Name = "PlayerAuctionsTwoWeeksLabel";
+            this.PlayerAuctionsTwoWeeksLabel.Size = new System.Drawing.Size(82, 17);
+            this.PlayerAuctionsTwoWeeksLabel.TabIndex = 4;
+            this.PlayerAuctionsTwoWeeksLabel.Text = "Unavailable";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(6, 131);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(130, 17);
+            this.label12.TabIndex = 5;
+            this.label12.Text = "Auctions (All Time):";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(6, 97);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(184, 17);
+            this.label18.TabIndex = 6;
+            this.label18.Text = "Auctions (Last Two Weeks):";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(6, 63);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(116, 17);
+            this.label19.TabIndex = 7;
+            this.label19.Text = "Auctions (Today)";
+            // 
+            // PlayerAuctionsTodayLabel
+            // 
+            this.PlayerAuctionsTodayLabel.AutoSize = true;
+            this.PlayerAuctionsTodayLabel.Location = new System.Drawing.Point(227, 63);
+            this.PlayerAuctionsTodayLabel.Name = "PlayerAuctionsTodayLabel";
+            this.PlayerAuctionsTodayLabel.Size = new System.Drawing.Size(82, 17);
+            this.PlayerAuctionsTodayLabel.TabIndex = 8;
+            this.PlayerAuctionsTodayLabel.Text = "Unavailable";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(287, 9);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(54, 17);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "Server:";
+            // 
+            // PlayersServerSearch
+            // 
+            this.PlayersServerSearch.Location = new System.Drawing.Point(347, 6);
+            this.PlayersServerSearch.Name = "PlayersServerSearch";
+            this.PlayersServerSearch.Size = new System.Drawing.Size(204, 22);
+            this.PlayersServerSearch.TabIndex = 4;
+            // 
+            // PSS
+            // 
+            this.PSS.AutoSize = true;
+            this.PSS.Location = new System.Drawing.Point(248, 9);
+            this.PSS.Name = "PSS";
+            this.PSS.Size = new System.Drawing.Size(54, 17);
+            this.PSS.TabIndex = 9;
+            this.PSS.Text = "Server:";
+            // 
+            // PlayerStatsServer
+            // 
+            this.PlayerStatsServer.Location = new System.Drawing.Point(308, 6);
+            this.PlayerStatsServer.Name = "PlayerStatsServer";
+            this.PlayerStatsServer.Size = new System.Drawing.Size(100, 22);
+            this.PlayerStatsServer.TabIndex = 10;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(139, 43);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(109, 17);
+            this.label11.TabIndex = 31;
+            this.label11.Text = "Global Statistics";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(416, 43);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(110, 17);
+            this.label13.TabIndex = 32;
+            this.label13.Text = "Server Statistics";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(6, 268);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(122, 17);
+            this.label14.TabIndex = 34;
+            this.label14.Text = "Buy From Vendor:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(6, 303);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(106, 17);
+            this.label16.TabIndex = 35;
+            this.label16.Text = "Sell To Vendor:";
+            // 
+            // MerchantBuyLabel
+            // 
+            this.MerchantBuyLabel.AutoSize = true;
+            this.MerchantBuyLabel.Location = new System.Drawing.Point(134, 268);
+            this.MerchantBuyLabel.Name = "MerchantBuyLabel";
+            this.MerchantBuyLabel.Size = new System.Drawing.Size(82, 17);
+            this.MerchantBuyLabel.TabIndex = 36;
+            this.MerchantBuyLabel.Text = "Unavailable";
+            // 
+            // MerchantSellLabel
+            // 
+            this.MerchantSellLabel.AutoSize = true;
+            this.MerchantSellLabel.Location = new System.Drawing.Point(134, 303);
+            this.MerchantSellLabel.Name = "MerchantSellLabel";
+            this.MerchantSellLabel.Size = new System.Drawing.Size(82, 17);
+            this.MerchantSellLabel.TabIndex = 37;
+            this.MerchantSellLabel.Text = "Unavailable";
+            // 
+            // wowahtDataSet1
+            // 
+            this.wowahtDataSet1.DataSetName = "wowahtDataSet1";
+            this.wowahtDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // wowahtDataSet1BindingSource
+            // 
+            this.wowahtDataSet1BindingSource.DataSource = this.wowahtDataSet1;
+            this.wowahtDataSet1BindingSource.Position = 0;
+            // 
+            // ItemRecipesGrid
+            // 
+            this.ItemRecipesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ItemRecipesGrid.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ItemRecipesGrid.Location = new System.Drawing.Point(3, 418);
+            this.ItemRecipesGrid.Name = "ItemRecipesGrid";
+            this.ItemRecipesGrid.RowTemplate.Height = 24;
+            this.ItemRecipesGrid.Size = new System.Drawing.Size(549, 109);
+            this.ItemRecipesGrid.TabIndex = 33;
             // 
             // Form1
             // 
@@ -821,9 +1297,21 @@
             this.tab_ServerSearch.PerformLayout();
             this.tab_ServerStats.ResumeLayout(false);
             this.tab_ServerStats.PerformLayout();
+            this.PlayersTab.ResumeLayout(false);
+            this.PlayersTabs.ResumeLayout(false);
+            this.PlayerSearchTab.ResumeLayout(false);
+            this.PlayerSearchTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PlayersDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wowahtDataSet)).EndInit();
+            this.PlayerStatsTab.ResumeLayout(false);
+            this.PlayerStatsTab.PerformLayout();
             this.ProfessionTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.professionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wowahtDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wowahtDataSet1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemRecipesGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -857,11 +1345,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn professionIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn abbrevationDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TabPage OverviewTab;
+        private System.Windows.Forms.TabPage AuctionsTab;
+        private System.Windows.Forms.TabPage PlayersTab;
+        private System.Windows.Forms.TabPage SearchTab;
+        private System.Windows.Forms.TabPage RawTab;
         private System.Windows.Forms.TextBox itemSearch;
         private System.Windows.Forms.TabControl Items_tabSelect;
         private System.Windows.Forms.TabPage Items_SearchTab;
@@ -881,7 +1369,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn regionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn serverPopDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox ItemStatsServerBox;
         private System.Windows.Forms.Label GlobalModeDisplay;
         private System.Windows.Forms.Label GlobalMeanDisplay;
         private System.Windows.Forms.Label label8;
@@ -901,6 +1389,51 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label AuctionsTodayLabel;
+        private System.Windows.Forms.Button ItemsServerIDButton;
+        private System.Windows.Forms.Label ServerStDevDisplay;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label St;
+        private System.Windows.Forms.Label GlobalStDevDisplay;
+        private System.Windows.Forms.Label ServerMedianDisplay;
+        private System.Windows.Forms.Label ServerMeanDisplay;
+        private System.Windows.Forms.Label ServerModeDisplay;
+        private System.Windows.Forms.TabControl PlayersTabs;
+        private System.Windows.Forms.TabPage PlayerSearchTab;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView PlayersDataGridView;
+        private System.Windows.Forms.TabPage PlayerStatsTab;
+        private System.Windows.Forms.TextBox UsernameSearchBox;
+        private System.Windows.Forms.Label UsernameLabel;
+        private wowahtDataSet wowahtDataSet;
+        private System.Windows.Forms.BindingSource playerBindingSource;
+        private wowahtDataSetTableAdapters.playerTableAdapter playerTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn playerIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastUpdatedDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn nameDataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn serverIDDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstProfessionIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn secondProfessionIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button PlayerStatsButton;
+        private System.Windows.Forms.Label PlayerAuctionsTodayLabel;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label PlayerAuctionsTwoWeeksLabel;
+        private System.Windows.Forms.Label PlayerAuctionsAllTimeLabel;
+        private System.Windows.Forms.TextBox PlayersServerSearch;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox PlayerStatsServer;
+        private System.Windows.Forms.Label PSS;
+        private System.Windows.Forms.Label MerchantSellLabel;
+        private System.Windows.Forms.Label MerchantBuyLabel;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.BindingSource wowahtDataSet1BindingSource;
+        private wowahtDataSet1 wowahtDataSet1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DataGridView ItemRecipesGrid;
     }
 }
 
