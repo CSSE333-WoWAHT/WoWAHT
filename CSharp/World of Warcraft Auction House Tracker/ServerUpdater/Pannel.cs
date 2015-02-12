@@ -1,5 +1,6 @@
 ﻿using ServerUpdater.Properties;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -116,14 +117,56 @@ namespace ServerUpdater
 
         private void ItemButton_Click(object sender, EventArgs e)
         {
-            wowahtAdminDataSetTableAdapters.itemTableAdapter iTa = new wowahtAdminDataSetTableAdapters.itemTableAdapter();
-            wowahtAdminDataSet.itemDataTable idt = iTa.GetData();
+            wowahtAdminDataSetTableAdapters.itemNullStatsTableAdapter iTa = new wowahtAdminDataSetTableAdapters.itemNullStatsTableAdapter();
+            wowahtAdminDataSet.itemNullStatsDataTable idt = iTa.GetData();
 
-            foreach (wowahtAdminDataSet.itemRow row in idt.Rows)
+            foreach (wowahtAdminDataSet.itemNullStatsRow row in idt.Rows)
             {
                 Item item = Item.getItem(row.WoW_Item_ID);
                 iTa.UpdateSBNAQuery(item.sellPrice, item.buyPrice, item.name, item.isAuctionable, row.Item_ID);
             }
         }
+
+        private void PlayerButton_Click(object sender, EventArgs e)
+        {
+            wowahtAdminDataSetTableAdapters.professionTableAdapter profTa = new wowahtAdminDataSetTableAdapters.professionTableAdapter();
+            wowahtAdminDataSet.professionDataTable profdt = profTa.GetData();
+
+            Dictionary<String, int> professions = new Dictionary<string, int>();
+
+            foreach ( wowahtAdminDataSet.professionRow row in profdt.Rows)
+            {
+                professions.Add(row.Name.ToUpper(),row.Profession_ID);
+            }
+
+            wowahtAdminDataSetTableAdapters.playerNullProfTableAdapter pTa = new wowahtAdminDataSetTableAdapters.playerNullProfTableAdapter();
+            wowahtAdminDataSet.playerNullProfDataTable pdt = pTa.GetData();
+
+            foreach (wowahtAdminDataSet.playerNullProfRow row in pdt.Rows)
+            {
+                Player player = Player.getPlayer(row.URL_Name, row.Name);
+                if (player == null)
+                    continue;
+                byte? p1 = null;
+                byte? p2 = null;
+
+                switch (player.professions.primary.Count)
+                {
+                    case 0:
+                        continue;
+                    case 2:
+                        p1 = (byte) professions[player.professions.primary[0].name.ToUpper()];
+                        //No Break continue to case1
+                        goto default;
+                    default:
+                        p2 = (byte) professions[player.professions.primary[1].name.ToUpper()];
+                        break;
+                }
+
+                pTa.UpdatePlayerProfQuery(p1, p2, row.Player_ID);
+            }
+        }
+
+
     }
 }

@@ -2,6 +2,10 @@
     
     
     public partial class wowahtAdminDataSet {
+        partial class itemNullStatsDataTable
+        {
+        }
+    
         partial class GetActiveServersForAPIDataTable
         {
         }
@@ -9,7 +13,7 @@
 }
 
 namespace ServerUpdater.wowahtAdminDataSetTableAdapters {
-    partial class itemTableAdapter
+    partial class itemNullStatsTableAdapter
     {
     }
     

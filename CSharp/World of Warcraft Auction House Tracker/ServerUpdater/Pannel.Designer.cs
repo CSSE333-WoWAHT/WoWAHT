@@ -35,6 +35,7 @@
             this.StopStartUpdateButton = new System.Windows.Forms.Button();
             this.updateTimer = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.PlayerButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ItemButton
@@ -69,14 +70,14 @@
             this.textBox.ReadOnly = true;
             this.textBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox.Size = new System.Drawing.Size(678, 348);
-            this.textBox.TabIndex = 2;
+            this.textBox.TabIndex = 10;
             // 
             // StopStartUpdateButton
             // 
             this.StopStartUpdateButton.Location = new System.Drawing.Point(12, 85);
             this.StopStartUpdateButton.Name = "StopStartUpdateButton";
             this.StopStartUpdateButton.Size = new System.Drawing.Size(100, 30);
-            this.StopStartUpdateButton.TabIndex = 3;
+            this.StopStartUpdateButton.TabIndex = 2;
             this.StopStartUpdateButton.Text = "Stop Updates";
             this.StopStartUpdateButton.UseVisualStyleBackColor = true;
             this.StopStartUpdateButton.Click += new System.EventHandler(this.StopStartUpdateButton_Click);
@@ -93,11 +94,22 @@
             this.notifyIcon.Visible = true;
             this.notifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseDoubleClick);
             // 
+            // PlayerButton
+            // 
+            this.PlayerButton.Location = new System.Drawing.Point(13, 122);
+            this.PlayerButton.Name = "PlayerButton";
+            this.PlayerButton.Size = new System.Drawing.Size(100, 30);
+            this.PlayerButton.TabIndex = 3;
+            this.PlayerButton.Text = "Player Professions";
+            this.PlayerButton.UseVisualStyleBackColor = true;
+            this.PlayerButton.Click += new System.EventHandler(this.PlayerButton_Click);
+            // 
             // Pannel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(816, 372);
+            this.Controls.Add(this.PlayerButton);
             this.Controls.Add(this.StopStartUpdateButton);
             this.Controls.Add(this.textBox);
             this.Controls.Add(this.RecipeButton);
@@ -117,5 +129,6 @@
         private System.Windows.Forms.Button StopStartUpdateButton;
         private System.Windows.Forms.Timer updateTimer;
         private System.Windows.Forms.NotifyIcon notifyIcon;
+        private System.Windows.Forms.Button PlayerButton;
     }
 }
