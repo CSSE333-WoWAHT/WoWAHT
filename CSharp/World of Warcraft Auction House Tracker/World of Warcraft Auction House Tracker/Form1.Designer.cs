@@ -43,6 +43,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataSourceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.readMeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -113,10 +114,35 @@
             this.PlayersServerSearch = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.PlayerNameSearch = new System.Windows.Forms.TextBox();
             this.PlayersDataGridView = new System.Windows.Forms.DataGridView();
-            this.playerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.wowahtDataSet = new World_of_Warcraft_Auction_House_Tracker.wowahtDataSet();
+            this.Player_Name = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Last_Updated = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Server_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.playerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastUpdatedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.serverIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstProfessionIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.secondProfessionIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.serverID1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uRLNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subRegionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.regionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.serverPopDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.professionIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.abbrevationDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.professionID1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name3DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.abbrevation1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.playerDataAllBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.PlayerStatsTab = new System.Windows.Forms.TabPage();
             this.PlayerStatsServer = new System.Windows.Forms.TextBox();
             this.PSS = new System.Windows.Forms.Label();
@@ -142,28 +168,22 @@
             this.ExecuteButton = new System.Windows.Forms.Button();
             this.ResultsTab = new System.Windows.Forms.TabPage();
             this.ResultsDataGrid = new System.Windows.Forms.DataGridView();
+            this.playerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.wowahtDataSet = new World_of_Warcraft_Auction_House_Tracker.wowahtDataSet();
             this.itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.playerTableAdapter = new World_of_Warcraft_Auction_House_Tracker.wowahtDataSetTableAdapters.playerTableAdapter();
+            this.wowahtDataSet1 = new World_of_Warcraft_Auction_House_Tracker.wowahtDataSet1();
+            this.wowahtDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.playersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.wowahtPublicDataSet1 = new World_of_Warcraft_Auction_House_Tracker.wowahtPublicDataSet();
             this.serverTableAdapter = new World_of_Warcraft_Auction_House_Tracker.wowahtPublicDataSetTableAdapters.serverTableAdapter();
             this.itemsTableAdapter1 = new World_of_Warcraft_Auction_House_Tracker.wowahtPublicDataSetTableAdapters.itemsTableAdapter();
             this.auctionsTableAdapter1 = new World_of_Warcraft_Auction_House_Tracker.wowahtPublicDataSetTableAdapters.auctionsTableAdapter();
             this.auctionsTableAdapter2 = new World_of_Warcraft_Auction_House_Tracker.wowahtPublicDataSetTableAdapters.auctionsTableAdapter();
             this.professionTableAdapter = new World_of_Warcraft_Auction_House_Tracker.wowahtPublicDataSetTableAdapters.professionTableAdapter();
-            this.playerTableAdapter = new World_of_Warcraft_Auction_House_Tracker.wowahtDataSetTableAdapters.playerTableAdapter();
-            this.wowahtDataSet1 = new World_of_Warcraft_Auction_House_Tracker.wowahtDataSet1();
-            this.wowahtDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.auctionsTableAdapter3 = new World_of_Warcraft_Auction_House_Tracker.wowahtPublicDataSetTableAdapters.auctionsTableAdapter();
-            this.playersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.playersTableAdapter = new World_of_Warcraft_Auction_House_Tracker.wowahtPublicDataSetTableAdapters.playersTableAdapter();
-            this.wowahtPublicDataSet1 = new World_of_Warcraft_Auction_House_Tracker.wowahtPublicDataSet();
-            this.playerDataAllBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.playerDataAllTableAdapter = new World_of_Warcraft_Auction_House_Tracker.wowahtPublicDataSetTableAdapters.playerDataAllTableAdapter();
-            this.Player_Name = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Last_Updated = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Server_ID1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataSourceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.Servers_DataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serverBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wowahtPublicDataSetBindingSource)).BeginInit();
@@ -188,8 +208,7 @@
             this.PlayersTabs.SuspendLayout();
             this.PlayerSearchTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PlayersDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wowahtDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerDataAllBindingSource)).BeginInit();
             this.PlayerStatsTab.SuspendLayout();
             this.ProfessionTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -199,12 +218,13 @@
             this.QueryTab.SuspendLayout();
             this.ResultsTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ResultsDataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wowahtDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wowahtDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wowahtDataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wowahtPublicDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.playerDataAllBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Servers_DataGrid
@@ -224,12 +244,13 @@
             this.typeDataGridViewTextBoxColumn,
             this.serverPopDataGridViewTextBoxColumn});
             this.Servers_DataGrid.DataSource = this.serverBindingSource;
-            this.Servers_DataGrid.Location = new System.Drawing.Point(6, 31);
+            this.Servers_DataGrid.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Servers_DataGrid.Location = new System.Drawing.Point(3, 32);
             this.Servers_DataGrid.Margin = new System.Windows.Forms.Padding(4);
             this.Servers_DataGrid.Name = "Servers_DataGrid";
             this.Servers_DataGrid.ReadOnly = true;
             this.Servers_DataGrid.RowHeadersVisible = false;
-            this.Servers_DataGrid.Size = new System.Drawing.Size(542, 492);
+            this.Servers_DataGrid.Size = new System.Drawing.Size(580, 515);
             this.Servers_DataGrid.TabIndex = 0;
             this.Servers_DataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Servers_DataGrid_CellContentClick);
             // 
@@ -330,9 +351,16 @@
             // quitToolStripMenuItem
             // 
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(106, 24);
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(159, 24);
             this.quitToolStripMenuItem.Text = "Quit";
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
+            // 
+            // dataSourceToolStripMenuItem
+            // 
+            this.dataSourceToolStripMenuItem.Name = "dataSourceToolStripMenuItem";
+            this.dataSourceToolStripMenuItem.Size = new System.Drawing.Size(159, 24);
+            this.dataSourceToolStripMenuItem.Text = "Data Source";
+            this.dataSourceToolStripMenuItem.Click += new System.EventHandler(this.dataSourceToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -348,6 +376,7 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(133, 24);
             this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // readMeToolStripMenuItem
             // 
@@ -364,11 +393,12 @@
             this.tabControl.Controls.Add(this.PlayersTab);
             this.tabControl.Controls.Add(this.ProfessionTab);
             this.tabControl.Controls.Add(this.SearchRawTab);
-            this.tabControl.Location = new System.Drawing.Point(18, 35);
+            this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl.Location = new System.Drawing.Point(0, 28);
             this.tabControl.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(579, 596);
+            this.tabControl.Size = new System.Drawing.Size(610, 616);
             this.tabControl.TabIndex = 2;
             // 
             // OverviewTab
@@ -380,7 +410,7 @@
             this.OverviewTab.Location = new System.Drawing.Point(4, 25);
             this.OverviewTab.Name = "OverviewTab";
             this.OverviewTab.Padding = new System.Windows.Forms.Padding(3);
-            this.OverviewTab.Size = new System.Drawing.Size(571, 567);
+            this.OverviewTab.Size = new System.Drawing.Size(602, 587);
             this.OverviewTab.TabIndex = 3;
             this.OverviewTab.Text = "Overview";
             this.OverviewTab.UseVisualStyleBackColor = true;
@@ -431,7 +461,7 @@
             this.AuctionsTab.Location = new System.Drawing.Point(4, 25);
             this.AuctionsTab.Name = "AuctionsTab";
             this.AuctionsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.AuctionsTab.Size = new System.Drawing.Size(571, 567);
+            this.AuctionsTab.Size = new System.Drawing.Size(602, 587);
             this.AuctionsTab.TabIndex = 4;
             this.AuctionsTab.Text = "Auctions";
             this.AuctionsTab.UseVisualStyleBackColor = true;
@@ -440,10 +470,10 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 34);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 54);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(565, 530);
+            this.dataGridView1.Size = new System.Drawing.Size(596, 530);
             this.dataGridView1.TabIndex = 2;
             // 
             // textBox2
@@ -469,7 +499,7 @@
             this.ItemsTab.Margin = new System.Windows.Forms.Padding(4);
             this.ItemsTab.Name = "ItemsTab";
             this.ItemsTab.Padding = new System.Windows.Forms.Padding(4);
-            this.ItemsTab.Size = new System.Drawing.Size(571, 567);
+            this.ItemsTab.Size = new System.Drawing.Size(602, 587);
             this.ItemsTab.TabIndex = 1;
             this.ItemsTab.Text = "Items";
             this.ItemsTab.UseVisualStyleBackColor = true;
@@ -483,7 +513,7 @@
             this.Items_tabSelect.Location = new System.Drawing.Point(4, 4);
             this.Items_tabSelect.Name = "Items_tabSelect";
             this.Items_tabSelect.SelectedIndex = 0;
-            this.Items_tabSelect.Size = new System.Drawing.Size(563, 559);
+            this.Items_tabSelect.Size = new System.Drawing.Size(594, 579);
             this.Items_tabSelect.TabIndex = 2;
             // 
             // Items_SearchTab
@@ -494,7 +524,7 @@
             this.Items_SearchTab.Location = new System.Drawing.Point(4, 25);
             this.Items_SearchTab.Name = "Items_SearchTab";
             this.Items_SearchTab.Padding = new System.Windows.Forms.Padding(3);
-            this.Items_SearchTab.Size = new System.Drawing.Size(555, 530);
+            this.Items_SearchTab.Size = new System.Drawing.Size(586, 550);
             this.Items_SearchTab.TabIndex = 0;
             this.Items_SearchTab.Text = "Search";
             this.Items_SearchTab.UseVisualStyleBackColor = true;
@@ -523,13 +553,14 @@
             this.itemTypeDataGridViewTextBoxColumn});
             this.Items_Datagrid.DataSource = this.itemsBindingSource1;
             this.Items_Datagrid.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Items_Datagrid.Location = new System.Drawing.Point(3, 34);
+            this.Items_Datagrid.Location = new System.Drawing.Point(3, 54);
             this.Items_Datagrid.Name = "Items_Datagrid";
             this.Items_Datagrid.ReadOnly = true;
             this.Items_Datagrid.RowHeadersVisible = false;
             this.Items_Datagrid.RowTemplate.Height = 24;
-            this.Items_Datagrid.Size = new System.Drawing.Size(549, 493);
+            this.Items_Datagrid.Size = new System.Drawing.Size(580, 493);
             this.Items_Datagrid.TabIndex = 0;
+            this.Items_Datagrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Items_Datagrid_CellContentClick);
             // 
             // woWItemIDDataGridViewTextBoxColumn
             // 
@@ -537,6 +568,7 @@
             this.woWItemIDDataGridViewTextBoxColumn.HeaderText = "Item ID";
             this.woWItemIDDataGridViewTextBoxColumn.Name = "woWItemIDDataGridViewTextBoxColumn";
             this.woWItemIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.woWItemIDDataGridViewTextBoxColumn.Visible = false;
             this.woWItemIDDataGridViewTextBoxColumn.Width = 175;
             // 
             // nameDataGridViewTextBoxColumn1
@@ -568,6 +600,7 @@
             this.itemSearch.Name = "itemSearch";
             this.itemSearch.Size = new System.Drawing.Size(483, 22);
             this.itemSearch.TabIndex = 1;
+            this.itemSearch.TextChanged += new System.EventHandler(this.itemSearch_TextChanged);
             // 
             // Items_StatsTab
             // 
@@ -599,7 +632,7 @@
             this.Items_StatsTab.Location = new System.Drawing.Point(4, 25);
             this.Items_StatsTab.Name = "Items_StatsTab";
             this.Items_StatsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.Items_StatsTab.Size = new System.Drawing.Size(555, 530);
+            this.Items_StatsTab.Size = new System.Drawing.Size(586, 550);
             this.Items_StatsTab.TabIndex = 1;
             this.Items_StatsTab.Text = "Statistics";
             this.Items_StatsTab.UseVisualStyleBackColor = true;
@@ -648,12 +681,12 @@
             this.ItemRecipesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ItemRecipesGrid.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ItemRecipesGrid.Enabled = false;
-            this.ItemRecipesGrid.Location = new System.Drawing.Point(3, 418);
+            this.ItemRecipesGrid.Location = new System.Drawing.Point(3, 438);
             this.ItemRecipesGrid.Name = "ItemRecipesGrid";
             this.ItemRecipesGrid.ReadOnly = true;
             this.ItemRecipesGrid.RowTemplate.Height = 24;
             this.ItemRecipesGrid.ShowEditingIcon = false;
-            this.ItemRecipesGrid.Size = new System.Drawing.Size(549, 109);
+            this.ItemRecipesGrid.Size = new System.Drawing.Size(580, 109);
             this.ItemRecipesGrid.TabIndex = 33;
             // 
             // label13
@@ -847,7 +880,7 @@
             this.ServerListTab.Margin = new System.Windows.Forms.Padding(4);
             this.ServerListTab.Name = "ServerListTab";
             this.ServerListTab.Padding = new System.Windows.Forms.Padding(4);
-            this.ServerListTab.Size = new System.Drawing.Size(571, 567);
+            this.ServerListTab.Size = new System.Drawing.Size(602, 587);
             this.ServerListTab.TabIndex = 0;
             this.ServerListTab.Text = "Servers";
             this.ServerListTab.UseVisualStyleBackColor = true;
@@ -860,7 +893,7 @@
             this.tabControl1.Location = new System.Drawing.Point(4, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(563, 559);
+            this.tabControl1.Size = new System.Drawing.Size(594, 579);
             this.tabControl1.TabIndex = 3;
             // 
             // tab_ServerSearch
@@ -871,7 +904,7 @@
             this.tab_ServerSearch.Location = new System.Drawing.Point(4, 25);
             this.tab_ServerSearch.Name = "tab_ServerSearch";
             this.tab_ServerSearch.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_ServerSearch.Size = new System.Drawing.Size(555, 530);
+            this.tab_ServerSearch.Size = new System.Drawing.Size(586, 550);
             this.tab_ServerSearch.TabIndex = 0;
             this.tab_ServerSearch.Text = "Search";
             this.tab_ServerSearch.UseVisualStyleBackColor = true;
@@ -879,16 +912,17 @@
             // ServerSearchTextBox
             // 
             this.ServerSearchTextBox.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.ServerSearchTextBox.Location = new System.Drawing.Point(76, 6);
+            this.ServerSearchTextBox.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ServerSearchTextBox.Location = new System.Drawing.Point(76, 3);
             this.ServerSearchTextBox.Name = "ServerSearchTextBox";
-            this.ServerSearchTextBox.Size = new System.Drawing.Size(472, 22);
+            this.ServerSearchTextBox.Size = new System.Drawing.Size(507, 22);
             this.ServerSearchTextBox.TabIndex = 1;
             this.ServerSearchTextBox.TextChanged += new System.EventHandler(this.ServerSearch_TextChanged);
             // 
             // Servers_SearchLabel
             // 
             this.Servers_SearchLabel.AutoSize = true;
-            this.Servers_SearchLabel.Location = new System.Drawing.Point(13, 9);
+            this.Servers_SearchLabel.Location = new System.Drawing.Point(13, 6);
             this.Servers_SearchLabel.Name = "Servers_SearchLabel";
             this.Servers_SearchLabel.Size = new System.Drawing.Size(57, 17);
             this.Servers_SearchLabel.TabIndex = 2;
@@ -909,7 +943,7 @@
             this.tab_ServerStats.Location = new System.Drawing.Point(4, 25);
             this.tab_ServerStats.Name = "tab_ServerStats";
             this.tab_ServerStats.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_ServerStats.Size = new System.Drawing.Size(555, 530);
+            this.tab_ServerStats.Size = new System.Drawing.Size(586, 550);
             this.tab_ServerStats.TabIndex = 1;
             this.tab_ServerStats.Text = "Statistics";
             this.tab_ServerStats.UseVisualStyleBackColor = true;
@@ -1004,7 +1038,7 @@
             this.PlayersTab.Location = new System.Drawing.Point(4, 25);
             this.PlayersTab.Name = "PlayersTab";
             this.PlayersTab.Padding = new System.Windows.Forms.Padding(3);
-            this.PlayersTab.Size = new System.Drawing.Size(571, 567);
+            this.PlayersTab.Size = new System.Drawing.Size(602, 587);
             this.PlayersTab.TabIndex = 5;
             this.PlayersTab.Text = "Players";
             this.PlayersTab.UseVisualStyleBackColor = true;
@@ -1017,7 +1051,7 @@
             this.PlayersTabs.Location = new System.Drawing.Point(3, 3);
             this.PlayersTabs.Name = "PlayersTabs";
             this.PlayersTabs.SelectedIndex = 0;
-            this.PlayersTabs.Size = new System.Drawing.Size(565, 561);
+            this.PlayersTabs.Size = new System.Drawing.Size(596, 581);
             this.PlayersTabs.TabIndex = 0;
             // 
             // PlayerSearchTab
@@ -1025,12 +1059,12 @@
             this.PlayerSearchTab.Controls.Add(this.PlayersServerSearch);
             this.PlayerSearchTab.Controls.Add(this.label10);
             this.PlayerSearchTab.Controls.Add(this.label1);
-            this.PlayerSearchTab.Controls.Add(this.textBox1);
+            this.PlayerSearchTab.Controls.Add(this.PlayerNameSearch);
             this.PlayerSearchTab.Controls.Add(this.PlayersDataGridView);
             this.PlayerSearchTab.Location = new System.Drawing.Point(4, 25);
             this.PlayerSearchTab.Name = "PlayerSearchTab";
             this.PlayerSearchTab.Padding = new System.Windows.Forms.Padding(3);
-            this.PlayerSearchTab.Size = new System.Drawing.Size(557, 532);
+            this.PlayerSearchTab.Size = new System.Drawing.Size(588, 552);
             this.PlayerSearchTab.TabIndex = 0;
             this.PlayerSearchTab.Text = "Search";
             this.PlayerSearchTab.UseVisualStyleBackColor = true;
@@ -1041,6 +1075,7 @@
             this.PlayersServerSearch.Name = "PlayersServerSearch";
             this.PlayersServerSearch.Size = new System.Drawing.Size(204, 22);
             this.PlayersServerSearch.TabIndex = 4;
+            this.PlayersServerSearch.TextChanged += new System.EventHandler(this.PlayersServerSearch_TextChanged);
             // 
             // label10
             // 
@@ -1060,12 +1095,13 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Username:";
             // 
-            // textBox1
+            // PlayerNameSearch
             // 
-            this.textBox1.Location = new System.Drawing.Point(89, 6);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(192, 22);
-            this.textBox1.TabIndex = 1;
+            this.PlayerNameSearch.Location = new System.Drawing.Point(89, 6);
+            this.PlayerNameSearch.Name = "PlayerNameSearch";
+            this.PlayerNameSearch.Size = new System.Drawing.Size(192, 22);
+            this.PlayerNameSearch.TabIndex = 1;
+            this.PlayerNameSearch.TextChanged += new System.EventHandler(this.PlayersServerSearch_TextChanged);
             // 
             // PlayersDataGridView
             // 
@@ -1077,29 +1113,205 @@
             this.PlayersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Player_Name,
             this.Last_Updated,
+            this.Server_ID,
             this.Name1,
-            this.Server_ID1,
             this.Name2,
-            this.Name3});
+            this.Name3,
+            this.playerIDDataGridViewTextBoxColumn,
+            this.lastUpdatedDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn3,
+            this.serverIDDataGridViewTextBoxColumn1,
+            this.firstProfessionIDDataGridViewTextBoxColumn,
+            this.secondProfessionIDDataGridViewTextBoxColumn,
+            this.serverID1DataGridViewTextBoxColumn,
+            this.name1DataGridViewTextBoxColumn,
+            this.uRLNameDataGridViewTextBoxColumn1,
+            this.subRegionDataGridViewTextBoxColumn1,
+            this.regionDataGridViewTextBoxColumn1,
+            this.typeDataGridViewTextBoxColumn1,
+            this.serverPopDataGridViewTextBoxColumn1,
+            this.activeDataGridViewTextBoxColumn,
+            this.professionIDDataGridViewTextBoxColumn1,
+            this.name2DataGridViewTextBoxColumn,
+            this.abbrevationDataGridViewTextBoxColumn1,
+            this.professionID1DataGridViewTextBoxColumn,
+            this.name3DataGridViewTextBoxColumn,
+            this.abbrevation1DataGridViewTextBoxColumn});
             this.PlayersDataGridView.DataSource = this.playerDataAllBindingSource;
             this.PlayersDataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.PlayersDataGridView.Location = new System.Drawing.Point(3, 34);
             this.PlayersDataGridView.Name = "PlayersDataGridView";
             this.PlayersDataGridView.RowHeadersVisible = false;
             this.PlayersDataGridView.RowTemplate.Height = 24;
-            this.PlayersDataGridView.Size = new System.Drawing.Size(551, 495);
+            this.PlayersDataGridView.Size = new System.Drawing.Size(582, 515);
             this.PlayersDataGridView.TabIndex = 0;
             this.PlayersDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PlayersDataGridView_CellContentClick);
             // 
-            // playerBindingSource
+            // Player_Name
             // 
-            this.playerBindingSource.DataMember = "player";
-            this.playerBindingSource.DataSource = this.wowahtDataSet;
+            this.Player_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Player_Name.DataPropertyName = "Name";
+            this.Player_Name.HeaderText = "Username";
+            this.Player_Name.Name = "Player_Name";
+            this.Player_Name.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Player_Name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Player_Name.Width = 98;
             // 
-            // wowahtDataSet
+            // Last_Updated
             // 
-            this.wowahtDataSet.DataSetName = "wowahtDataSet";
-            this.wowahtDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.Last_Updated.DataPropertyName = "Last_Updated";
+            this.Last_Updated.HeaderText = "Last Updated";
+            this.Last_Updated.Name = "Last_Updated";
+            // 
+            // Server_ID
+            // 
+            this.Server_ID.DataPropertyName = "Server_ID";
+            this.Server_ID.HeaderText = "Server_ID";
+            this.Server_ID.Name = "Server_ID";
+            this.Server_ID.Visible = false;
+            // 
+            // Name1
+            // 
+            this.Name1.DataPropertyName = "Name1";
+            this.Name1.HeaderText = "Server";
+            this.Name1.Name = "Name1";
+            // 
+            // Name2
+            // 
+            this.Name2.DataPropertyName = "Name2";
+            this.Name2.HeaderText = "First Profession";
+            this.Name2.Name = "Name2";
+            // 
+            // Name3
+            // 
+            this.Name3.DataPropertyName = "Name3";
+            this.Name3.HeaderText = "Second Profession";
+            this.Name3.Name = "Name3";
+            // 
+            // playerIDDataGridViewTextBoxColumn
+            // 
+            this.playerIDDataGridViewTextBoxColumn.DataPropertyName = "Player_ID";
+            this.playerIDDataGridViewTextBoxColumn.HeaderText = "Player_ID";
+            this.playerIDDataGridViewTextBoxColumn.Name = "playerIDDataGridViewTextBoxColumn";
+            // 
+            // lastUpdatedDataGridViewTextBoxColumn
+            // 
+            this.lastUpdatedDataGridViewTextBoxColumn.DataPropertyName = "Last_Updated";
+            this.lastUpdatedDataGridViewTextBoxColumn.HeaderText = "Last_Updated";
+            this.lastUpdatedDataGridViewTextBoxColumn.Name = "lastUpdatedDataGridViewTextBoxColumn";
+            // 
+            // nameDataGridViewTextBoxColumn3
+            // 
+            this.nameDataGridViewTextBoxColumn3.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn3.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn3.Name = "nameDataGridViewTextBoxColumn3";
+            // 
+            // serverIDDataGridViewTextBoxColumn1
+            // 
+            this.serverIDDataGridViewTextBoxColumn1.DataPropertyName = "Server_ID";
+            this.serverIDDataGridViewTextBoxColumn1.HeaderText = "Server_ID";
+            this.serverIDDataGridViewTextBoxColumn1.Name = "serverIDDataGridViewTextBoxColumn1";
+            // 
+            // firstProfessionIDDataGridViewTextBoxColumn
+            // 
+            this.firstProfessionIDDataGridViewTextBoxColumn.DataPropertyName = "First_Profession_ID";
+            this.firstProfessionIDDataGridViewTextBoxColumn.HeaderText = "First_Profession_ID";
+            this.firstProfessionIDDataGridViewTextBoxColumn.Name = "firstProfessionIDDataGridViewTextBoxColumn";
+            // 
+            // secondProfessionIDDataGridViewTextBoxColumn
+            // 
+            this.secondProfessionIDDataGridViewTextBoxColumn.DataPropertyName = "Second_Profession_ID";
+            this.secondProfessionIDDataGridViewTextBoxColumn.HeaderText = "Second_Profession_ID";
+            this.secondProfessionIDDataGridViewTextBoxColumn.Name = "secondProfessionIDDataGridViewTextBoxColumn";
+            // 
+            // serverID1DataGridViewTextBoxColumn
+            // 
+            this.serverID1DataGridViewTextBoxColumn.DataPropertyName = "Server_ID1";
+            this.serverID1DataGridViewTextBoxColumn.HeaderText = "Server_ID1";
+            this.serverID1DataGridViewTextBoxColumn.Name = "serverID1DataGridViewTextBoxColumn";
+            // 
+            // name1DataGridViewTextBoxColumn
+            // 
+            this.name1DataGridViewTextBoxColumn.DataPropertyName = "Name1";
+            this.name1DataGridViewTextBoxColumn.HeaderText = "Name1";
+            this.name1DataGridViewTextBoxColumn.Name = "name1DataGridViewTextBoxColumn";
+            // 
+            // uRLNameDataGridViewTextBoxColumn1
+            // 
+            this.uRLNameDataGridViewTextBoxColumn1.DataPropertyName = "URL_Name";
+            this.uRLNameDataGridViewTextBoxColumn1.HeaderText = "URL_Name";
+            this.uRLNameDataGridViewTextBoxColumn1.Name = "uRLNameDataGridViewTextBoxColumn1";
+            // 
+            // subRegionDataGridViewTextBoxColumn1
+            // 
+            this.subRegionDataGridViewTextBoxColumn1.DataPropertyName = "Sub_Region";
+            this.subRegionDataGridViewTextBoxColumn1.HeaderText = "Sub_Region";
+            this.subRegionDataGridViewTextBoxColumn1.Name = "subRegionDataGridViewTextBoxColumn1";
+            // 
+            // regionDataGridViewTextBoxColumn1
+            // 
+            this.regionDataGridViewTextBoxColumn1.DataPropertyName = "Region";
+            this.regionDataGridViewTextBoxColumn1.HeaderText = "Region";
+            this.regionDataGridViewTextBoxColumn1.Name = "regionDataGridViewTextBoxColumn1";
+            // 
+            // typeDataGridViewTextBoxColumn1
+            // 
+            this.typeDataGridViewTextBoxColumn1.DataPropertyName = "Type";
+            this.typeDataGridViewTextBoxColumn1.HeaderText = "Type";
+            this.typeDataGridViewTextBoxColumn1.Name = "typeDataGridViewTextBoxColumn1";
+            // 
+            // serverPopDataGridViewTextBoxColumn1
+            // 
+            this.serverPopDataGridViewTextBoxColumn1.DataPropertyName = "Server_Pop";
+            this.serverPopDataGridViewTextBoxColumn1.HeaderText = "Server_Pop";
+            this.serverPopDataGridViewTextBoxColumn1.Name = "serverPopDataGridViewTextBoxColumn1";
+            // 
+            // activeDataGridViewTextBoxColumn
+            // 
+            this.activeDataGridViewTextBoxColumn.DataPropertyName = "Active";
+            this.activeDataGridViewTextBoxColumn.HeaderText = "Active";
+            this.activeDataGridViewTextBoxColumn.Name = "activeDataGridViewTextBoxColumn";
+            // 
+            // professionIDDataGridViewTextBoxColumn1
+            // 
+            this.professionIDDataGridViewTextBoxColumn1.DataPropertyName = "Profession_ID";
+            this.professionIDDataGridViewTextBoxColumn1.HeaderText = "Profession_ID";
+            this.professionIDDataGridViewTextBoxColumn1.Name = "professionIDDataGridViewTextBoxColumn1";
+            // 
+            // name2DataGridViewTextBoxColumn
+            // 
+            this.name2DataGridViewTextBoxColumn.DataPropertyName = "Name2";
+            this.name2DataGridViewTextBoxColumn.HeaderText = "Name2";
+            this.name2DataGridViewTextBoxColumn.Name = "name2DataGridViewTextBoxColumn";
+            // 
+            // abbrevationDataGridViewTextBoxColumn1
+            // 
+            this.abbrevationDataGridViewTextBoxColumn1.DataPropertyName = "Abbrevation";
+            this.abbrevationDataGridViewTextBoxColumn1.HeaderText = "Abbrevation";
+            this.abbrevationDataGridViewTextBoxColumn1.Name = "abbrevationDataGridViewTextBoxColumn1";
+            // 
+            // professionID1DataGridViewTextBoxColumn
+            // 
+            this.professionID1DataGridViewTextBoxColumn.DataPropertyName = "Profession_ID1";
+            this.professionID1DataGridViewTextBoxColumn.HeaderText = "Profession_ID1";
+            this.professionID1DataGridViewTextBoxColumn.Name = "professionID1DataGridViewTextBoxColumn";
+            // 
+            // name3DataGridViewTextBoxColumn
+            // 
+            this.name3DataGridViewTextBoxColumn.DataPropertyName = "Name3";
+            this.name3DataGridViewTextBoxColumn.HeaderText = "Name3";
+            this.name3DataGridViewTextBoxColumn.Name = "name3DataGridViewTextBoxColumn";
+            // 
+            // abbrevation1DataGridViewTextBoxColumn
+            // 
+            this.abbrevation1DataGridViewTextBoxColumn.DataPropertyName = "Abbrevation1";
+            this.abbrevation1DataGridViewTextBoxColumn.HeaderText = "Abbrevation1";
+            this.abbrevation1DataGridViewTextBoxColumn.Name = "abbrevation1DataGridViewTextBoxColumn";
+            // 
+            // playerDataAllBindingSource
+            // 
+            this.playerDataAllBindingSource.DataMember = "playerDataAll";
+            this.playerDataAllBindingSource.DataSource = this.wowahtPublicDataSet;
             // 
             // PlayerStatsTab
             // 
@@ -1117,7 +1329,7 @@
             this.PlayerStatsTab.Location = new System.Drawing.Point(4, 25);
             this.PlayerStatsTab.Name = "PlayerStatsTab";
             this.PlayerStatsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.PlayerStatsTab.Size = new System.Drawing.Size(557, 532);
+            this.PlayerStatsTab.Size = new System.Drawing.Size(588, 552);
             this.PlayerStatsTab.TabIndex = 1;
             this.PlayerStatsTab.Text = "Statistics";
             this.PlayerStatsTab.UseVisualStyleBackColor = true;
@@ -1229,7 +1441,7 @@
             this.ProfessionTab.Margin = new System.Windows.Forms.Padding(4);
             this.ProfessionTab.Name = "ProfessionTab";
             this.ProfessionTab.Padding = new System.Windows.Forms.Padding(4);
-            this.ProfessionTab.Size = new System.Drawing.Size(571, 567);
+            this.ProfessionTab.Size = new System.Drawing.Size(602, 587);
             this.ProfessionTab.TabIndex = 2;
             this.ProfessionTab.Text = "Professions";
             this.ProfessionTab.UseVisualStyleBackColor = true;
@@ -1251,7 +1463,7 @@
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(563, 559);
+            this.dataGridView3.Size = new System.Drawing.Size(594, 579);
             this.dataGridView3.TabIndex = 0;
             // 
             // professionIDDataGridViewTextBoxColumn
@@ -1289,7 +1501,7 @@
             this.SearchRawTab.Location = new System.Drawing.Point(4, 25);
             this.SearchRawTab.Name = "SearchRawTab";
             this.SearchRawTab.Padding = new System.Windows.Forms.Padding(3);
-            this.SearchRawTab.Size = new System.Drawing.Size(571, 567);
+            this.SearchRawTab.Size = new System.Drawing.Size(602, 587);
             this.SearchRawTab.TabIndex = 6;
             this.SearchRawTab.Text = "Search Raw";
             this.SearchRawTab.UseVisualStyleBackColor = true;
@@ -1302,7 +1514,7 @@
             this.SearchRawTabs.Location = new System.Drawing.Point(3, 3);
             this.SearchRawTabs.Name = "SearchRawTabs";
             this.SearchRawTabs.SelectedIndex = 0;
-            this.SearchRawTabs.Size = new System.Drawing.Size(565, 561);
+            this.SearchRawTabs.Size = new System.Drawing.Size(596, 581);
             this.SearchRawTabs.TabIndex = 0;
             // 
             // QueryTab
@@ -1312,7 +1524,7 @@
             this.QueryTab.Location = new System.Drawing.Point(4, 25);
             this.QueryTab.Name = "QueryTab";
             this.QueryTab.Padding = new System.Windows.Forms.Padding(3);
-            this.QueryTab.Size = new System.Drawing.Size(557, 532);
+            this.QueryTab.Size = new System.Drawing.Size(588, 552);
             this.QueryTab.TabIndex = 0;
             this.QueryTab.Text = "Query";
             this.QueryTab.UseVisualStyleBackColor = true;
@@ -1343,7 +1555,7 @@
             this.ResultsTab.Location = new System.Drawing.Point(4, 25);
             this.ResultsTab.Name = "ResultsTab";
             this.ResultsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.ResultsTab.Size = new System.Drawing.Size(557, 532);
+            this.ResultsTab.Size = new System.Drawing.Size(588, 552);
             this.ResultsTab.TabIndex = 1;
             this.ResultsTab.Text = "Results";
             this.ResultsTab.UseVisualStyleBackColor = true;
@@ -1355,13 +1567,47 @@
             this.ResultsDataGrid.Location = new System.Drawing.Point(3, 3);
             this.ResultsDataGrid.Name = "ResultsDataGrid";
             this.ResultsDataGrid.RowTemplate.Height = 24;
-            this.ResultsDataGrid.Size = new System.Drawing.Size(551, 526);
+            this.ResultsDataGrid.Size = new System.Drawing.Size(582, 546);
             this.ResultsDataGrid.TabIndex = 0;
+            // 
+            // playerBindingSource
+            // 
+            this.playerBindingSource.DataMember = "player";
+            this.playerBindingSource.DataSource = this.wowahtDataSet;
+            // 
+            // wowahtDataSet
+            // 
+            this.wowahtDataSet.DataSetName = "wowahtDataSet";
+            this.wowahtDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // itemsBindingSource
             // 
             this.itemsBindingSource.DataMember = "items";
             this.itemsBindingSource.DataSource = this.wowahtPublicDataSetBindingSource;
+            // 
+            // playerTableAdapter
+            // 
+            this.playerTableAdapter.ClearBeforeFill = true;
+            // 
+            // wowahtDataSet1
+            // 
+            this.wowahtDataSet1.DataSetName = "wowahtDataSet1";
+            this.wowahtDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // wowahtDataSet1BindingSource
+            // 
+            this.wowahtDataSet1BindingSource.DataSource = this.wowahtDataSet1;
+            this.wowahtDataSet1BindingSource.Position = 0;
+            // 
+            // playersBindingSource
+            // 
+            this.playersBindingSource.DataMember = "players";
+            this.playersBindingSource.DataSource = this.wowahtPublicDataSetBindingSource;
+            // 
+            // wowahtPublicDataSet1
+            // 
+            this.wowahtPublicDataSet1.DataSetName = "wowahtPublicDataSet";
+            this.wowahtPublicDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // serverTableAdapter
             // 
@@ -1383,94 +1629,17 @@
             // 
             this.professionTableAdapter.ClearBeforeFill = true;
             // 
-            // playerTableAdapter
-            // 
-            this.playerTableAdapter.ClearBeforeFill = true;
-            // 
-            // wowahtDataSet1
-            // 
-            this.wowahtDataSet1.DataSetName = "wowahtDataSet1";
-            this.wowahtDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // wowahtDataSet1BindingSource
-            // 
-            this.wowahtDataSet1BindingSource.DataSource = this.wowahtDataSet1;
-            this.wowahtDataSet1BindingSource.Position = 0;
-            // 
             // auctionsTableAdapter3
             // 
             this.auctionsTableAdapter3.ClearBeforeFill = true;
-            // 
-            // playersBindingSource
-            // 
-            this.playersBindingSource.DataMember = "players";
-            this.playersBindingSource.DataSource = this.wowahtPublicDataSetBindingSource;
             // 
             // playersTableAdapter
             // 
             this.playersTableAdapter.ClearBeforeFill = true;
             // 
-            // wowahtPublicDataSet1
-            // 
-            this.wowahtPublicDataSet1.DataSetName = "wowahtPublicDataSet";
-            this.wowahtPublicDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // playerDataAllBindingSource
-            // 
-            this.playerDataAllBindingSource.DataMember = "playerDataAll";
-            this.playerDataAllBindingSource.DataSource = this.wowahtPublicDataSet1;
-            // 
             // playerDataAllTableAdapter
             // 
             this.playerDataAllTableAdapter.ClearBeforeFill = true;
-            // 
-            // Player_Name
-            // 
-            this.Player_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Player_Name.DataPropertyName = "Name";
-            this.Player_Name.HeaderText = "Username";
-            this.Player_Name.Name = "Player_Name";
-            this.Player_Name.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Player_Name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Player_Name.Width = 98;
-            // 
-            // Last_Updated
-            // 
-            this.Last_Updated.DataPropertyName = "Last_Updated";
-            this.Last_Updated.HeaderText = "Last Updated";
-            this.Last_Updated.Name = "Last_Updated";
-            // 
-            // Name1
-            // 
-            this.Name1.DataPropertyName = "Name1";
-            this.Name1.HeaderText = "Server";
-            this.Name1.Name = "Name1";
-            // 
-            // Server_ID1
-            // 
-            this.Server_ID1.DataPropertyName = "Server_ID1";
-            this.Server_ID1.HeaderText = "Server_ID";
-            this.Server_ID1.Name = "Server_ID1";
-            this.Server_ID1.Visible = false;
-            // 
-            // Name2
-            // 
-            this.Name2.DataPropertyName = "Name2";
-            this.Name2.HeaderText = "First Profession";
-            this.Name2.Name = "Name2";
-            // 
-            // Name3
-            // 
-            this.Name3.DataPropertyName = "Name3";
-            this.Name3.HeaderText = "Second Profession";
-            this.Name3.Name = "Name3";
-            // 
-            // dataSourceToolStripMenuItem
-            // 
-            this.dataSourceToolStripMenuItem.Name = "dataSourceToolStripMenuItem";
-            this.dataSourceToolStripMenuItem.Size = new System.Drawing.Size(175, 24);
-            this.dataSourceToolStripMenuItem.Text = "Data Source";
-            this.dataSourceToolStripMenuItem.Click += new System.EventHandler(this.dataSourceToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -1482,7 +1651,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "World of Warcraft Auction House Tracker - WoWAHT ver0.8";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Servers_DataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.serverBindingSource)).EndInit();
@@ -1516,8 +1685,7 @@
             this.PlayerSearchTab.ResumeLayout(false);
             this.PlayerSearchTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PlayersDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wowahtDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerDataAllBindingSource)).EndInit();
             this.PlayerStatsTab.ResumeLayout(false);
             this.PlayerStatsTab.PerformLayout();
             this.ProfessionTab.ResumeLayout(false);
@@ -1529,12 +1697,13 @@
             this.QueryTab.PerformLayout();
             this.ResultsTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ResultsDataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wowahtDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wowahtDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wowahtDataSet1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.playersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wowahtPublicDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.playerDataAllBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1576,9 +1745,6 @@
         private System.Windows.Forms.TabControl Items_tabSelect;
         private System.Windows.Forms.TabPage Items_SearchTab;
         private System.Windows.Forms.TabPage Items_StatsTab;
-        private System.Windows.Forms.DataGridViewTextBoxColumn woWItemIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewButtonColumn nameDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn itemTypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label Items_SearchLable;
         private System.Windows.Forms.Label Servers_SearchLabel;
         private System.Windows.Forms.TextBox ServerSearchTextBox;
@@ -1622,7 +1788,7 @@
         private System.Windows.Forms.TabControl PlayersTabs;
         private System.Windows.Forms.TabPage PlayerSearchTab;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox PlayerNameSearch;
         private System.Windows.Forms.DataGridView PlayersDataGridView;
         private System.Windows.Forms.TabPage PlayerStatsTab;
         private System.Windows.Forms.TextBox UsernameSearchBox;
@@ -1670,13 +1836,36 @@
         private wowahtPublicDataSet wowahtPublicDataSet1;
         private System.Windows.Forms.BindingSource playerDataAllBindingSource;
         private wowahtPublicDataSetTableAdapters.playerDataAllTableAdapter playerDataAllTableAdapter;
+        private System.Windows.Forms.ToolStripMenuItem dataSourceToolStripMenuItem;
         private System.Windows.Forms.DataGridViewButtonColumn Player_Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Last_Updated;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Server_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Name1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Server_ID1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Name2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Name3;
-        private System.Windows.Forms.ToolStripMenuItem dataSourceToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn woWItemIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn nameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemTypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn playerIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastUpdatedDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn serverIDDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstProfessionIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn secondProfessionIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn serverID1DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name1DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn uRLNameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subRegionDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn regionDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn serverPopDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn activeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn professionIDDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name2DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn abbrevationDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn professionID1DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name3DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn abbrevation1DataGridViewTextBoxColumn;
     }
 }
 

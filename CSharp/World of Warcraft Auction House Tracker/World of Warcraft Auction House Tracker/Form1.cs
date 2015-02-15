@@ -24,7 +24,7 @@ namespace World_of_Warcraft_Auction_House_Tracker
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'wowahtPublicDataSet1.playerDataAll' table. You can move, or remove it, as needed.
-            this.playerDataAllTableAdapter.Fill(this.wowahtPublicDataSet1.playerDataAll);
+            this.playerDataAllTableAdapter.Fill(this.wowahtPublicDataSet.playerDataAll);
             // TODO: This line of code loads data into the 'wowahtPublicDataSet.players' table. You can move, or remove it, as needed.
             this.playersTableAdapter.Fill(this.wowahtPublicDataSet.players);
             // TODO: This line of code loads data into the 'wowahtDataSet.player' table. You can move, or remove it, as needed.
@@ -70,6 +70,16 @@ namespace World_of_Warcraft_Auction_House_Tracker
         private void ServerSearch_TextChanged(object sender, EventArgs e)
         {
             (Servers_DataGrid.DataSource as BindingSource).Filter = string.Format("Name Like '{0}*'", ServerSearchTextBox.Text.Replace("'", "''"));
+        }
+
+        private void PlayersServerSearch_TextChanged(object sender, EventArgs e)
+        {
+            (PlayersDataGridView.DataSource as BindingSource).Filter = string.Format("Name1 Like '{0}*' AND Name Like '{1}*'", PlayersServerSearch.Text.Replace("'", "''"), PlayerNameSearch.Text.Replace("'", "''"));
+        }
+
+        private void itemSearch_TextChanged(object sender, EventArgs e)
+        {
+            (Items_Datagrid.DataSource as BindingSource).Filter = string.Format("Name Like '{0}*'", itemSearch.Text.Replace("'", "''"));
         }
 
         private void Servers_SearchLabel_Click(object sender, EventArgs e)
@@ -139,6 +149,20 @@ namespace World_of_Warcraft_Auction_House_Tracker
             }
         }
 
+        private void Items_Datagrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var senderGrid = (DataGridView)sender;
+
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                e.RowIndex >= 0)
+            {
+                //TODO - Button Clicked - Execute Code Here
+                Items_tabSelect.SelectedTab = Items_StatsTab;
+                ItemStatisticsID.Text = Items_Datagrid.Rows[e.RowIndex].Cells["woWItemIDDataGridViewTextBoxColumn"].Value.ToString();
+                button2_Click(null, null);
+            }
+        }
+
         private void PlayersDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             var senderGrid = (DataGridView)sender;
@@ -149,7 +173,7 @@ namespace World_of_Warcraft_Auction_House_Tracker
                 //TODO - Button Clicked - Execute Code Here
                 PlayersTabs.SelectedTab = PlayerStatsTab;
                 UsernameSearchBox.Text = PlayersDataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
-                PlayerStatsServer.Text = PlayersDataGridView.Rows[e.RowIndex].Cells["Server_ID1"].Value.ToString();
+                PlayerStatsServer.Text = PlayersDataGridView.Rows[e.RowIndex].Cells["Server_ID"].Value.ToString();
                 UsernameSearchButton_Click(null, null);
             }
         }
@@ -292,6 +316,11 @@ namespace World_of_Warcraft_Auction_House_Tracker
         private void dataSourceToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new AboutWindow().Show();
         }
     }
 }
