@@ -17,6 +17,8 @@ namespace World_of_Warcraft_Auction_House_Tracker
         public Form1()
         {
             InitializeComponent();
+            wowahtPublicDataSetTableAdapters.itemsTableAdapter ita = new wowahtPublicDataSetTableAdapters.itemsTableAdapter();
+            Items_Datagrid.DataSource = ita.GetData();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -57,11 +59,6 @@ namespace World_of_Warcraft_Auction_House_Tracker
         }
 
         private void ItemsTab_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

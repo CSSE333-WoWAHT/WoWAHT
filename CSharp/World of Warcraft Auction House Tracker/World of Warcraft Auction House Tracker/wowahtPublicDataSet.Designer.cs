@@ -4924,7 +4924,6 @@ namespace World_of_Warcraft_Auction_House_Tracker {
                 this.columnItem_Type = new global::System.Data.DataColumn("Item_Type", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnItem_Type);
                 this.columnWoW_Item_ID.AllowDBNull = false;
-                this.columnName.AllowDBNull = false;
                 this.columnName.MaxLength = 50;
                 this.columnItem_Type.AllowDBNull = false;
                 this.columnItem_Type.MaxLength = 7;
@@ -6738,7 +6737,12 @@ namespace World_of_Warcraft_Auction_House_Tracker {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string Name {
                 get {
-                    return ((string)(this[this.tableitems.NameColumn]));
+                    try {
+                        return ((string)(this[this.tableitems.NameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Name\' in table \'items\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableitems.NameColumn] = value;
@@ -6754,6 +6758,18 @@ namespace World_of_Warcraft_Auction_House_Tracker {
                 set {
                     this[this.tableitems.Item_TypeColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNameNull() {
+                return this.IsNull(this.tableitems.NameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNameNull() {
+                this[this.tableitems.NameColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -13125,11 +13141,11 @@ namespace World_of_Warcraft_Auction_House_Tracker.wowahtPublicDataSetTableAdapte
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT `WoW_Item_ID`, `Name`, `Item_Type` FROM `wowaht`.`items`";
+            this._commandCollection[1].CommandText = "SELECT Item_Type, Name, WoW_Item_ID FROM items";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT `WoW_Item_ID`, `Name`, `Item_Type` FROM `wowaht`.`items`";
+            this._commandCollection[2].CommandText = "SELECT Item_Type, Name, WoW_Item_ID FROM items";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
         }
         

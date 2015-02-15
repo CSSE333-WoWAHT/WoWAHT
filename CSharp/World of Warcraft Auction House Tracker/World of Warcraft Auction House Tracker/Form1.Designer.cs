@@ -57,9 +57,16 @@
             this.woWItemIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.itemTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.itemsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.itemSearch = new System.Windows.Forms.TextBox();
             this.Items_StatsTab = new System.Windows.Forms.TabPage();
+            this.MerchantSellLabel = new System.Windows.Forms.Label();
+            this.MerchantBuyLabel = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.ItemRecipesGrid = new System.Windows.Forms.DataGridView();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.ItemsServerIDButton = new System.Windows.Forms.Button();
             this.ServerStDevDisplay = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -96,6 +103,8 @@
             this.PlayersTab = new System.Windows.Forms.TabPage();
             this.PlayersTabs = new System.Windows.Forms.TabControl();
             this.PlayerSearchTab = new System.Windows.Forms.TabPage();
+            this.PlayersServerSearch = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.PlayersDataGridView = new System.Windows.Forms.DataGridView();
@@ -108,6 +117,14 @@
             this.playerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.wowahtDataSet = new World_of_Warcraft_Auction_House_Tracker.wowahtDataSet();
             this.PlayerStatsTab = new System.Windows.Forms.TabPage();
+            this.PlayerStatsServer = new System.Windows.Forms.TextBox();
+            this.PSS = new System.Windows.Forms.Label();
+            this.PlayerAuctionsTodayLabel = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.PlayerAuctionsTwoWeeksLabel = new System.Windows.Forms.Label();
+            this.PlayerAuctionsAllTimeLabel = new System.Windows.Forms.Label();
             this.PlayerStatsButton = new System.Windows.Forms.Button();
             this.UsernameSearchBox = new System.Windows.Forms.TextBox();
             this.UsernameLabel = new System.Windows.Forms.Label();
@@ -119,31 +136,15 @@
             this.professionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.SearchTab = new System.Windows.Forms.TabPage();
             this.RawTab = new System.Windows.Forms.TabPage();
+            this.itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.serverTableAdapter = new World_of_Warcraft_Auction_House_Tracker.wowahtPublicDataSetTableAdapters.serverTableAdapter();
             this.itemsTableAdapter1 = new World_of_Warcraft_Auction_House_Tracker.wowahtPublicDataSetTableAdapters.itemsTableAdapter();
             this.auctionsTableAdapter1 = new World_of_Warcraft_Auction_House_Tracker.wowahtPublicDataSetTableAdapters.auctionsTableAdapter();
             this.auctionsTableAdapter2 = new World_of_Warcraft_Auction_House_Tracker.wowahtPublicDataSetTableAdapters.auctionsTableAdapter();
             this.professionTableAdapter = new World_of_Warcraft_Auction_House_Tracker.wowahtPublicDataSetTableAdapters.professionTableAdapter();
             this.playerTableAdapter = new World_of_Warcraft_Auction_House_Tracker.wowahtDataSetTableAdapters.playerTableAdapter();
-            this.PlayerAuctionsAllTimeLabel = new System.Windows.Forms.Label();
-            this.PlayerAuctionsTwoWeeksLabel = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.PlayerAuctionsTodayLabel = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.PlayersServerSearch = new System.Windows.Forms.TextBox();
-            this.PSS = new System.Windows.Forms.Label();
-            this.PlayerStatsServer = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.MerchantBuyLabel = new System.Windows.Forms.Label();
-            this.MerchantSellLabel = new System.Windows.Forms.Label();
             this.wowahtDataSet1 = new World_of_Warcraft_Auction_House_Tracker.wowahtDataSet1();
             this.wowahtDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ItemRecipesGrid = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.Servers_DataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serverBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wowahtPublicDataSetBindingSource)).BeginInit();
@@ -154,8 +155,9 @@
             this.Items_tabSelect.SuspendLayout();
             this.Items_SearchTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Items_Datagrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource1)).BeginInit();
             this.Items_StatsTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemRecipesGrid)).BeginInit();
             this.ServerListTab.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tab_ServerSearch.SuspendLayout();
@@ -170,9 +172,9 @@
             this.ProfessionTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.professionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wowahtDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wowahtDataSet1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemRecipesGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // Servers_DataGrid
@@ -418,7 +420,7 @@
             this.woWItemIDDataGridViewTextBoxColumn,
             this.nameDataGridViewTextBoxColumn1,
             this.itemTypeDataGridViewTextBoxColumn});
-            this.Items_Datagrid.DataSource = this.itemsBindingSource;
+            this.Items_Datagrid.DataSource = this.itemsBindingSource1;
             this.Items_Datagrid.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Items_Datagrid.Location = new System.Drawing.Point(3, 34);
             this.Items_Datagrid.Name = "Items_Datagrid";
@@ -427,7 +429,6 @@
             this.Items_Datagrid.RowTemplate.Height = 24;
             this.Items_Datagrid.Size = new System.Drawing.Size(549, 493);
             this.Items_Datagrid.TabIndex = 0;
-            this.Items_Datagrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // woWItemIDDataGridViewTextBoxColumn
             // 
@@ -455,10 +456,10 @@
             this.itemTypeDataGridViewTextBoxColumn.ReadOnly = true;
             this.itemTypeDataGridViewTextBoxColumn.Width = 175;
             // 
-            // itemsBindingSource
+            // itemsBindingSource1
             // 
-            this.itemsBindingSource.DataMember = "items";
-            this.itemsBindingSource.DataSource = this.wowahtPublicDataSetBindingSource;
+            this.itemsBindingSource1.DataMember = "items";
+            this.itemsBindingSource1.DataSource = this.wowahtPublicDataSetBindingSource;
             // 
             // itemSearch
             // 
@@ -501,6 +502,76 @@
             this.Items_StatsTab.TabIndex = 1;
             this.Items_StatsTab.Text = "Statistics";
             this.Items_StatsTab.UseVisualStyleBackColor = true;
+            // 
+            // MerchantSellLabel
+            // 
+            this.MerchantSellLabel.AutoSize = true;
+            this.MerchantSellLabel.Location = new System.Drawing.Point(134, 303);
+            this.MerchantSellLabel.Name = "MerchantSellLabel";
+            this.MerchantSellLabel.Size = new System.Drawing.Size(82, 17);
+            this.MerchantSellLabel.TabIndex = 37;
+            this.MerchantSellLabel.Text = "Unavailable";
+            // 
+            // MerchantBuyLabel
+            // 
+            this.MerchantBuyLabel.AutoSize = true;
+            this.MerchantBuyLabel.Location = new System.Drawing.Point(134, 268);
+            this.MerchantBuyLabel.Name = "MerchantBuyLabel";
+            this.MerchantBuyLabel.Size = new System.Drawing.Size(82, 17);
+            this.MerchantBuyLabel.TabIndex = 36;
+            this.MerchantBuyLabel.Text = "Unavailable";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(6, 303);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(106, 17);
+            this.label16.TabIndex = 35;
+            this.label16.Text = "Sell To Vendor:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(6, 268);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(122, 17);
+            this.label14.TabIndex = 34;
+            this.label14.Text = "Buy From Vendor:";
+            // 
+            // ItemRecipesGrid
+            // 
+            this.ItemRecipesGrid.AllowUserToAddRows = false;
+            this.ItemRecipesGrid.AllowUserToDeleteRows = false;
+            this.ItemRecipesGrid.AllowUserToOrderColumns = true;
+            this.ItemRecipesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ItemRecipesGrid.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ItemRecipesGrid.Enabled = false;
+            this.ItemRecipesGrid.Location = new System.Drawing.Point(3, 418);
+            this.ItemRecipesGrid.Name = "ItemRecipesGrid";
+            this.ItemRecipesGrid.ReadOnly = true;
+            this.ItemRecipesGrid.RowTemplate.Height = 24;
+            this.ItemRecipesGrid.ShowEditingIcon = false;
+            this.ItemRecipesGrid.Size = new System.Drawing.Size(549, 109);
+            this.ItemRecipesGrid.TabIndex = 33;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(416, 43);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(110, 17);
+            this.label13.TabIndex = 32;
+            this.label13.Text = "Server Statistics";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(139, 43);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(109, 17);
+            this.label11.TabIndex = 31;
+            this.label11.Text = "Global Statistics";
             // 
             // ItemsServerIDButton
             // 
@@ -861,6 +932,22 @@
             this.PlayerSearchTab.Text = "Search";
             this.PlayerSearchTab.UseVisualStyleBackColor = true;
             // 
+            // PlayersServerSearch
+            // 
+            this.PlayersServerSearch.Location = new System.Drawing.Point(347, 6);
+            this.PlayersServerSearch.Name = "PlayersServerSearch";
+            this.PlayersServerSearch.Size = new System.Drawing.Size(204, 22);
+            this.PlayersServerSearch.TabIndex = 4;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(287, 9);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(54, 17);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "Server:";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -879,6 +966,9 @@
             // 
             // PlayersDataGridView
             // 
+            this.PlayersDataGridView.AllowUserToAddRows = false;
+            this.PlayersDataGridView.AllowUserToDeleteRows = false;
+            this.PlayersDataGridView.AllowUserToOrderColumns = true;
             this.PlayersDataGridView.AutoGenerateColumns = false;
             this.PlayersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.PlayersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -970,6 +1060,76 @@
             this.PlayerStatsTab.TabIndex = 1;
             this.PlayerStatsTab.Text = "Statistics";
             this.PlayerStatsTab.UseVisualStyleBackColor = true;
+            // 
+            // PlayerStatsServer
+            // 
+            this.PlayerStatsServer.Location = new System.Drawing.Point(308, 6);
+            this.PlayerStatsServer.Name = "PlayerStatsServer";
+            this.PlayerStatsServer.Size = new System.Drawing.Size(100, 22);
+            this.PlayerStatsServer.TabIndex = 10;
+            // 
+            // PSS
+            // 
+            this.PSS.AutoSize = true;
+            this.PSS.Location = new System.Drawing.Point(248, 9);
+            this.PSS.Name = "PSS";
+            this.PSS.Size = new System.Drawing.Size(54, 17);
+            this.PSS.TabIndex = 9;
+            this.PSS.Text = "Server:";
+            // 
+            // PlayerAuctionsTodayLabel
+            // 
+            this.PlayerAuctionsTodayLabel.AutoSize = true;
+            this.PlayerAuctionsTodayLabel.Location = new System.Drawing.Point(227, 63);
+            this.PlayerAuctionsTodayLabel.Name = "PlayerAuctionsTodayLabel";
+            this.PlayerAuctionsTodayLabel.Size = new System.Drawing.Size(82, 17);
+            this.PlayerAuctionsTodayLabel.TabIndex = 8;
+            this.PlayerAuctionsTodayLabel.Text = "Unavailable";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(6, 63);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(116, 17);
+            this.label19.TabIndex = 7;
+            this.label19.Text = "Auctions (Today)";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(6, 97);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(184, 17);
+            this.label18.TabIndex = 6;
+            this.label18.Text = "Auctions (Last Two Weeks):";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(6, 131);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(130, 17);
+            this.label12.TabIndex = 5;
+            this.label12.Text = "Auctions (All Time):";
+            // 
+            // PlayerAuctionsTwoWeeksLabel
+            // 
+            this.PlayerAuctionsTwoWeeksLabel.AutoSize = true;
+            this.PlayerAuctionsTwoWeeksLabel.Location = new System.Drawing.Point(227, 97);
+            this.PlayerAuctionsTwoWeeksLabel.Name = "PlayerAuctionsTwoWeeksLabel";
+            this.PlayerAuctionsTwoWeeksLabel.Size = new System.Drawing.Size(82, 17);
+            this.PlayerAuctionsTwoWeeksLabel.TabIndex = 4;
+            this.PlayerAuctionsTwoWeeksLabel.Text = "Unavailable";
+            // 
+            // PlayerAuctionsAllTimeLabel
+            // 
+            this.PlayerAuctionsAllTimeLabel.AutoSize = true;
+            this.PlayerAuctionsAllTimeLabel.Location = new System.Drawing.Point(227, 131);
+            this.PlayerAuctionsAllTimeLabel.Name = "PlayerAuctionsAllTimeLabel";
+            this.PlayerAuctionsAllTimeLabel.Size = new System.Drawing.Size(82, 17);
+            this.PlayerAuctionsAllTimeLabel.TabIndex = 3;
+            this.PlayerAuctionsAllTimeLabel.Text = "Unavailable";
             // 
             // PlayerStatsButton
             // 
@@ -1080,6 +1240,11 @@
             this.RawTab.Text = "Raw";
             this.RawTab.UseVisualStyleBackColor = true;
             // 
+            // itemsBindingSource
+            // 
+            this.itemsBindingSource.DataMember = "items";
+            this.itemsBindingSource.DataSource = this.wowahtPublicDataSetBindingSource;
+            // 
             // serverTableAdapter
             // 
             this.serverTableAdapter.ClearBeforeFill = true;
@@ -1104,146 +1269,6 @@
             // 
             this.playerTableAdapter.ClearBeforeFill = true;
             // 
-            // PlayerAuctionsAllTimeLabel
-            // 
-            this.PlayerAuctionsAllTimeLabel.AutoSize = true;
-            this.PlayerAuctionsAllTimeLabel.Location = new System.Drawing.Point(227, 131);
-            this.PlayerAuctionsAllTimeLabel.Name = "PlayerAuctionsAllTimeLabel";
-            this.PlayerAuctionsAllTimeLabel.Size = new System.Drawing.Size(82, 17);
-            this.PlayerAuctionsAllTimeLabel.TabIndex = 3;
-            this.PlayerAuctionsAllTimeLabel.Text = "Unavailable";
-            // 
-            // PlayerAuctionsTwoWeeksLabel
-            // 
-            this.PlayerAuctionsTwoWeeksLabel.AutoSize = true;
-            this.PlayerAuctionsTwoWeeksLabel.Location = new System.Drawing.Point(227, 97);
-            this.PlayerAuctionsTwoWeeksLabel.Name = "PlayerAuctionsTwoWeeksLabel";
-            this.PlayerAuctionsTwoWeeksLabel.Size = new System.Drawing.Size(82, 17);
-            this.PlayerAuctionsTwoWeeksLabel.TabIndex = 4;
-            this.PlayerAuctionsTwoWeeksLabel.Text = "Unavailable";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 131);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(130, 17);
-            this.label12.TabIndex = 5;
-            this.label12.Text = "Auctions (All Time):";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(6, 97);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(184, 17);
-            this.label18.TabIndex = 6;
-            this.label18.Text = "Auctions (Last Two Weeks):";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(6, 63);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(116, 17);
-            this.label19.TabIndex = 7;
-            this.label19.Text = "Auctions (Today)";
-            // 
-            // PlayerAuctionsTodayLabel
-            // 
-            this.PlayerAuctionsTodayLabel.AutoSize = true;
-            this.PlayerAuctionsTodayLabel.Location = new System.Drawing.Point(227, 63);
-            this.PlayerAuctionsTodayLabel.Name = "PlayerAuctionsTodayLabel";
-            this.PlayerAuctionsTodayLabel.Size = new System.Drawing.Size(82, 17);
-            this.PlayerAuctionsTodayLabel.TabIndex = 8;
-            this.PlayerAuctionsTodayLabel.Text = "Unavailable";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(287, 9);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(54, 17);
-            this.label10.TabIndex = 3;
-            this.label10.Text = "Server:";
-            // 
-            // PlayersServerSearch
-            // 
-            this.PlayersServerSearch.Location = new System.Drawing.Point(347, 6);
-            this.PlayersServerSearch.Name = "PlayersServerSearch";
-            this.PlayersServerSearch.Size = new System.Drawing.Size(204, 22);
-            this.PlayersServerSearch.TabIndex = 4;
-            // 
-            // PSS
-            // 
-            this.PSS.AutoSize = true;
-            this.PSS.Location = new System.Drawing.Point(248, 9);
-            this.PSS.Name = "PSS";
-            this.PSS.Size = new System.Drawing.Size(54, 17);
-            this.PSS.TabIndex = 9;
-            this.PSS.Text = "Server:";
-            // 
-            // PlayerStatsServer
-            // 
-            this.PlayerStatsServer.Location = new System.Drawing.Point(308, 6);
-            this.PlayerStatsServer.Name = "PlayerStatsServer";
-            this.PlayerStatsServer.Size = new System.Drawing.Size(100, 22);
-            this.PlayerStatsServer.TabIndex = 10;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(139, 43);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(109, 17);
-            this.label11.TabIndex = 31;
-            this.label11.Text = "Global Statistics";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(416, 43);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(110, 17);
-            this.label13.TabIndex = 32;
-            this.label13.Text = "Server Statistics";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(6, 268);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(122, 17);
-            this.label14.TabIndex = 34;
-            this.label14.Text = "Buy From Vendor:";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(6, 303);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(106, 17);
-            this.label16.TabIndex = 35;
-            this.label16.Text = "Sell To Vendor:";
-            // 
-            // MerchantBuyLabel
-            // 
-            this.MerchantBuyLabel.AutoSize = true;
-            this.MerchantBuyLabel.Location = new System.Drawing.Point(134, 268);
-            this.MerchantBuyLabel.Name = "MerchantBuyLabel";
-            this.MerchantBuyLabel.Size = new System.Drawing.Size(82, 17);
-            this.MerchantBuyLabel.TabIndex = 36;
-            this.MerchantBuyLabel.Text = "Unavailable";
-            // 
-            // MerchantSellLabel
-            // 
-            this.MerchantSellLabel.AutoSize = true;
-            this.MerchantSellLabel.Location = new System.Drawing.Point(134, 303);
-            this.MerchantSellLabel.Name = "MerchantSellLabel";
-            this.MerchantSellLabel.Size = new System.Drawing.Size(82, 17);
-            this.MerchantSellLabel.TabIndex = 37;
-            this.MerchantSellLabel.Text = "Unavailable";
-            // 
             // wowahtDataSet1
             // 
             this.wowahtDataSet1.DataSetName = "wowahtDataSet1";
@@ -1253,16 +1278,6 @@
             // 
             this.wowahtDataSet1BindingSource.DataSource = this.wowahtDataSet1;
             this.wowahtDataSet1BindingSource.Position = 0;
-            // 
-            // ItemRecipesGrid
-            // 
-            this.ItemRecipesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ItemRecipesGrid.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ItemRecipesGrid.Location = new System.Drawing.Point(3, 418);
-            this.ItemRecipesGrid.Name = "ItemRecipesGrid";
-            this.ItemRecipesGrid.RowTemplate.Height = 24;
-            this.ItemRecipesGrid.Size = new System.Drawing.Size(549, 109);
-            this.ItemRecipesGrid.TabIndex = 33;
             // 
             // Form1
             // 
@@ -1288,9 +1303,10 @@
             this.Items_SearchTab.ResumeLayout(false);
             this.Items_SearchTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Items_Datagrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource1)).EndInit();
             this.Items_StatsTab.ResumeLayout(false);
             this.Items_StatsTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemRecipesGrid)).EndInit();
             this.ServerListTab.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tab_ServerSearch.ResumeLayout(false);
@@ -1309,9 +1325,9 @@
             this.ProfessionTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.professionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wowahtDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wowahtDataSet1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemRecipesGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1434,6 +1450,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridView ItemRecipesGrid;
+        private System.Windows.Forms.BindingSource itemsBindingSource1;
     }
 }
 

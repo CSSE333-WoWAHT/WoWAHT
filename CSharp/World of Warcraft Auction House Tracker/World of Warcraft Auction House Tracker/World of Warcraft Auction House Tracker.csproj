@@ -89,6 +89,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>wowahtDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="wowahtPublicDataSet.cs">
+      <DependentUpon>wowahtPublicDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="wowahtPublicDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
