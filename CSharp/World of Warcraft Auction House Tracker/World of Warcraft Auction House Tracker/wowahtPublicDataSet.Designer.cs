@@ -52,6 +52,8 @@ namespace World_of_Warcraft_Auction_House_Tracker {
         
         private playersDataTable tableplayers;
         
+        private playerDataAllDataTable tableplayerDataAll;
+        
         private global::System.Data.DataRelation relationCurrent_FK;
         
         private global::System.Data.DataRelation relationFK_auction_item;
@@ -151,6 +153,9 @@ namespace World_of_Warcraft_Auction_House_Tracker {
                 }
                 if ((ds.Tables["players"] != null)) {
                     base.Tables.Add(new playersDataTable(ds.Tables["players"]));
+                }
+                if ((ds.Tables["playerDataAll"] != null)) {
+                    base.Tables.Add(new playerDataAllDataTable(ds.Tables["playerDataAll"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -312,6 +317,16 @@ namespace World_of_Warcraft_Auction_House_Tracker {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public playerDataAllDataTable playerDataAll {
+            get {
+                return this.tableplayerDataAll;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -418,6 +433,9 @@ namespace World_of_Warcraft_Auction_House_Tracker {
                 }
                 if ((ds.Tables["players"] != null)) {
                     base.Tables.Add(new playersDataTable(ds.Tables["players"]));
+                }
+                if ((ds.Tables["playerDataAll"] != null)) {
+                    base.Tables.Add(new playerDataAllDataTable(ds.Tables["playerDataAll"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -536,6 +554,12 @@ namespace World_of_Warcraft_Auction_House_Tracker {
                     this.tableplayers.InitVars();
                 }
             }
+            this.tableplayerDataAll = ((playerDataAllDataTable)(base.Tables["playerDataAll"]));
+            if ((initTable == true)) {
+                if ((this.tableplayerDataAll != null)) {
+                    this.tableplayerDataAll.InitVars();
+                }
+            }
             this.relationCurrent_FK = this.Relations["Current_FK"];
             this.relationFK_auction_item = this.Relations["FK_auction_item"];
             this.relationFK_auction_player = this.Relations["FK_auction_player"];
@@ -589,6 +613,8 @@ namespace World_of_Warcraft_Auction_House_Tracker {
             base.Tables.Add(this.tableitems);
             this.tableplayers = new playersDataTable();
             base.Tables.Add(this.tableplayers);
+            this.tableplayerDataAll = new playerDataAllDataTable();
+            base.Tables.Add(this.tableplayerDataAll);
             this.relationCurrent_FK = new global::System.Data.DataRelation("Current_FK", new global::System.Data.DataColumn[] {
                         this.tabletime.Time_IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableauction.Current_WoW_Time_IDColumn}, false);
@@ -737,6 +763,12 @@ namespace World_of_Warcraft_Auction_House_Tracker {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeplayerDataAll() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -831,6 +863,9 @@ namespace World_of_Warcraft_Auction_House_Tracker {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void playersRowChangeEventHandler(object sender, playersRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void playerDataAllRowChangeEventHandler(object sender, playerDataAllRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -5365,6 +5400,562 @@ namespace World_of_Warcraft_Auction_House_Tracker {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class playerDataAllDataTable : global::System.Data.TypedTableBase<playerDataAllRow> {
+            
+            private global::System.Data.DataColumn columnPlayer_ID;
+            
+            private global::System.Data.DataColumn columnLast_Updated;
+            
+            private global::System.Data.DataColumn columnName;
+            
+            private global::System.Data.DataColumn columnServer_ID;
+            
+            private global::System.Data.DataColumn columnFirst_Profession_ID;
+            
+            private global::System.Data.DataColumn columnSecond_Profession_ID;
+            
+            private global::System.Data.DataColumn columnServer_ID1;
+            
+            private global::System.Data.DataColumn columnName1;
+            
+            private global::System.Data.DataColumn columnURL_Name;
+            
+            private global::System.Data.DataColumn columnSub_Region;
+            
+            private global::System.Data.DataColumn columnRegion;
+            
+            private global::System.Data.DataColumn columnType;
+            
+            private global::System.Data.DataColumn columnServer_Pop;
+            
+            private global::System.Data.DataColumn columnActive;
+            
+            private global::System.Data.DataColumn columnProfession_ID;
+            
+            private global::System.Data.DataColumn columnName2;
+            
+            private global::System.Data.DataColumn columnAbbrevation;
+            
+            private global::System.Data.DataColumn columnProfession_ID1;
+            
+            private global::System.Data.DataColumn columnName3;
+            
+            private global::System.Data.DataColumn columnAbbrevation1;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public playerDataAllDataTable() {
+                this.TableName = "playerDataAll";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal playerDataAllDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected playerDataAllDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Player_IDColumn {
+                get {
+                    return this.columnPlayer_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Last_UpdatedColumn {
+                get {
+                    return this.columnLast_Updated;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NameColumn {
+                get {
+                    return this.columnName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Server_IDColumn {
+                get {
+                    return this.columnServer_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn First_Profession_IDColumn {
+                get {
+                    return this.columnFirst_Profession_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Second_Profession_IDColumn {
+                get {
+                    return this.columnSecond_Profession_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Server_ID1Column {
+                get {
+                    return this.columnServer_ID1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Name1Column {
+                get {
+                    return this.columnName1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn URL_NameColumn {
+                get {
+                    return this.columnURL_Name;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Sub_RegionColumn {
+                get {
+                    return this.columnSub_Region;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RegionColumn {
+                get {
+                    return this.columnRegion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TypeColumn {
+                get {
+                    return this.columnType;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Server_PopColumn {
+                get {
+                    return this.columnServer_Pop;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ActiveColumn {
+                get {
+                    return this.columnActive;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Profession_IDColumn {
+                get {
+                    return this.columnProfession_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Name2Column {
+                get {
+                    return this.columnName2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn AbbrevationColumn {
+                get {
+                    return this.columnAbbrevation;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Profession_ID1Column {
+                get {
+                    return this.columnProfession_ID1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Name3Column {
+                get {
+                    return this.columnName3;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Abbrevation1Column {
+                get {
+                    return this.columnAbbrevation1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public playerDataAllRow this[int index] {
+                get {
+                    return ((playerDataAllRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event playerDataAllRowChangeEventHandler playerDataAllRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event playerDataAllRowChangeEventHandler playerDataAllRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event playerDataAllRowChangeEventHandler playerDataAllRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event playerDataAllRowChangeEventHandler playerDataAllRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddplayerDataAllRow(playerDataAllRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public playerDataAllRow AddplayerDataAllRow(
+                        uint Player_ID, 
+                        System.DateTime Last_Updated, 
+                        string Name, 
+                        ushort Server_ID, 
+                        byte First_Profession_ID, 
+                        byte Second_Profession_ID, 
+                        ushort Server_ID1, 
+                        string Name1, 
+                        string URL_Name, 
+                        string Sub_Region, 
+                        string Region, 
+                        string Type, 
+                        string Server_Pop, 
+                        ulong Active, 
+                        byte Profession_ID, 
+                        string Name2, 
+                        string Abbrevation, 
+                        byte Profession_ID1, 
+                        string Name3, 
+                        string Abbrevation1) {
+                playerDataAllRow rowplayerDataAllRow = ((playerDataAllRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Player_ID,
+                        Last_Updated,
+                        Name,
+                        Server_ID,
+                        First_Profession_ID,
+                        Second_Profession_ID,
+                        Server_ID1,
+                        Name1,
+                        URL_Name,
+                        Sub_Region,
+                        Region,
+                        Type,
+                        Server_Pop,
+                        Active,
+                        Profession_ID,
+                        Name2,
+                        Abbrevation,
+                        Profession_ID1,
+                        Name3,
+                        Abbrevation1};
+                rowplayerDataAllRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowplayerDataAllRow);
+                return rowplayerDataAllRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                playerDataAllDataTable cln = ((playerDataAllDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new playerDataAllDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnPlayer_ID = base.Columns["Player_ID"];
+                this.columnLast_Updated = base.Columns["Last_Updated"];
+                this.columnName = base.Columns["Name"];
+                this.columnServer_ID = base.Columns["Server_ID"];
+                this.columnFirst_Profession_ID = base.Columns["First_Profession_ID"];
+                this.columnSecond_Profession_ID = base.Columns["Second_Profession_ID"];
+                this.columnServer_ID1 = base.Columns["Server_ID1"];
+                this.columnName1 = base.Columns["Name1"];
+                this.columnURL_Name = base.Columns["URL_Name"];
+                this.columnSub_Region = base.Columns["Sub_Region"];
+                this.columnRegion = base.Columns["Region"];
+                this.columnType = base.Columns["Type"];
+                this.columnServer_Pop = base.Columns["Server_Pop"];
+                this.columnActive = base.Columns["Active"];
+                this.columnProfession_ID = base.Columns["Profession_ID"];
+                this.columnName2 = base.Columns["Name2"];
+                this.columnAbbrevation = base.Columns["Abbrevation"];
+                this.columnProfession_ID1 = base.Columns["Profession_ID1"];
+                this.columnName3 = base.Columns["Name3"];
+                this.columnAbbrevation1 = base.Columns["Abbrevation1"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnPlayer_ID = new global::System.Data.DataColumn("Player_ID", typeof(uint), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPlayer_ID);
+                this.columnLast_Updated = new global::System.Data.DataColumn("Last_Updated", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLast_Updated);
+                this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnName);
+                this.columnServer_ID = new global::System.Data.DataColumn("Server_ID", typeof(ushort), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnServer_ID);
+                this.columnFirst_Profession_ID = new global::System.Data.DataColumn("First_Profession_ID", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFirst_Profession_ID);
+                this.columnSecond_Profession_ID = new global::System.Data.DataColumn("Second_Profession_ID", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSecond_Profession_ID);
+                this.columnServer_ID1 = new global::System.Data.DataColumn("Server_ID1", typeof(ushort), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnServer_ID1);
+                this.columnName1 = new global::System.Data.DataColumn("Name1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnName1);
+                this.columnURL_Name = new global::System.Data.DataColumn("URL_Name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnURL_Name);
+                this.columnSub_Region = new global::System.Data.DataColumn("Sub_Region", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSub_Region);
+                this.columnRegion = new global::System.Data.DataColumn("Region", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRegion);
+                this.columnType = new global::System.Data.DataColumn("Type", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnType);
+                this.columnServer_Pop = new global::System.Data.DataColumn("Server_Pop", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnServer_Pop);
+                this.columnActive = new global::System.Data.DataColumn("Active", typeof(ulong), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnActive);
+                this.columnProfession_ID = new global::System.Data.DataColumn("Profession_ID", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProfession_ID);
+                this.columnName2 = new global::System.Data.DataColumn("Name2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnName2);
+                this.columnAbbrevation = new global::System.Data.DataColumn("Abbrevation", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAbbrevation);
+                this.columnProfession_ID1 = new global::System.Data.DataColumn("Profession_ID1", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProfession_ID1);
+                this.columnName3 = new global::System.Data.DataColumn("Name3", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnName3);
+                this.columnAbbrevation1 = new global::System.Data.DataColumn("Abbrevation1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAbbrevation1);
+                this.columnPlayer_ID.AllowDBNull = false;
+                this.columnLast_Updated.AllowDBNull = false;
+                this.columnName.AllowDBNull = false;
+                this.columnName.MaxLength = 20;
+                this.columnServer_ID.AllowDBNull = false;
+                this.columnServer_ID1.AllowDBNull = false;
+                this.columnName1.AllowDBNull = false;
+                this.columnName1.MaxLength = 20;
+                this.columnURL_Name.AllowDBNull = false;
+                this.columnURL_Name.MaxLength = 50;
+                this.columnSub_Region.AllowDBNull = false;
+                this.columnSub_Region.MaxLength = 20;
+                this.columnRegion.AllowDBNull = false;
+                this.columnRegion.MaxLength = 2;
+                this.columnType.AllowDBNull = false;
+                this.columnType.MaxLength = 6;
+                this.columnServer_Pop.AllowDBNull = false;
+                this.columnServer_Pop.MaxLength = 6;
+                this.columnActive.AllowDBNull = false;
+                this.columnName2.MaxLength = 20;
+                this.columnAbbrevation.MaxLength = 10;
+                this.columnName3.MaxLength = 20;
+                this.columnAbbrevation1.MaxLength = 10;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public playerDataAllRow NewplayerDataAllRow() {
+                return ((playerDataAllRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new playerDataAllRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(playerDataAllRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.playerDataAllRowChanged != null)) {
+                    this.playerDataAllRowChanged(this, new playerDataAllRowChangeEvent(((playerDataAllRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.playerDataAllRowChanging != null)) {
+                    this.playerDataAllRowChanging(this, new playerDataAllRowChangeEvent(((playerDataAllRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.playerDataAllRowDeleted != null)) {
+                    this.playerDataAllRowDeleted(this, new playerDataAllRowChangeEvent(((playerDataAllRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.playerDataAllRowDeleting != null)) {
+                    this.playerDataAllRowDeleting(this, new playerDataAllRowChangeEvent(((playerDataAllRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveplayerDataAllRow(playerDataAllRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                wowahtPublicDataSet ds = new wowahtPublicDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "playerDataAllDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class auctionRow : global::System.Data.DataRow {
@@ -6878,6 +7469,377 @@ namespace World_of_Warcraft_Auction_House_Tracker {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class playerDataAllRow : global::System.Data.DataRow {
+            
+            private playerDataAllDataTable tableplayerDataAll;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal playerDataAllRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableplayerDataAll = ((playerDataAllDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public uint Player_ID {
+                get {
+                    return ((uint)(this[this.tableplayerDataAll.Player_IDColumn]));
+                }
+                set {
+                    this[this.tableplayerDataAll.Player_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime Last_Updated {
+                get {
+                    return ((global::System.DateTime)(this[this.tableplayerDataAll.Last_UpdatedColumn]));
+                }
+                set {
+                    this[this.tableplayerDataAll.Last_UpdatedColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Name {
+                get {
+                    return ((string)(this[this.tableplayerDataAll.NameColumn]));
+                }
+                set {
+                    this[this.tableplayerDataAll.NameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ushort Server_ID {
+                get {
+                    return ((ushort)(this[this.tableplayerDataAll.Server_IDColumn]));
+                }
+                set {
+                    this[this.tableplayerDataAll.Server_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public byte First_Profession_ID {
+                get {
+                    try {
+                        return ((byte)(this[this.tableplayerDataAll.First_Profession_IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'First_Profession_ID\' in table \'playerDataAll\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableplayerDataAll.First_Profession_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public byte Second_Profession_ID {
+                get {
+                    try {
+                        return ((byte)(this[this.tableplayerDataAll.Second_Profession_IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Second_Profession_ID\' in table \'playerDataAll\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableplayerDataAll.Second_Profession_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ushort Server_ID1 {
+                get {
+                    return ((ushort)(this[this.tableplayerDataAll.Server_ID1Column]));
+                }
+                set {
+                    this[this.tableplayerDataAll.Server_ID1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Name1 {
+                get {
+                    return ((string)(this[this.tableplayerDataAll.Name1Column]));
+                }
+                set {
+                    this[this.tableplayerDataAll.Name1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string URL_Name {
+                get {
+                    return ((string)(this[this.tableplayerDataAll.URL_NameColumn]));
+                }
+                set {
+                    this[this.tableplayerDataAll.URL_NameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Sub_Region {
+                get {
+                    return ((string)(this[this.tableplayerDataAll.Sub_RegionColumn]));
+                }
+                set {
+                    this[this.tableplayerDataAll.Sub_RegionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Region {
+                get {
+                    return ((string)(this[this.tableplayerDataAll.RegionColumn]));
+                }
+                set {
+                    this[this.tableplayerDataAll.RegionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Type {
+                get {
+                    return ((string)(this[this.tableplayerDataAll.TypeColumn]));
+                }
+                set {
+                    this[this.tableplayerDataAll.TypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Server_Pop {
+                get {
+                    return ((string)(this[this.tableplayerDataAll.Server_PopColumn]));
+                }
+                set {
+                    this[this.tableplayerDataAll.Server_PopColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ulong Active {
+                get {
+                    return ((ulong)(this[this.tableplayerDataAll.ActiveColumn]));
+                }
+                set {
+                    this[this.tableplayerDataAll.ActiveColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public byte Profession_ID {
+                get {
+                    try {
+                        return ((byte)(this[this.tableplayerDataAll.Profession_IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Profession_ID\' in table \'playerDataAll\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableplayerDataAll.Profession_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Name2 {
+                get {
+                    try {
+                        return ((string)(this[this.tableplayerDataAll.Name2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Name2\' in table \'playerDataAll\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableplayerDataAll.Name2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Abbrevation {
+                get {
+                    try {
+                        return ((string)(this[this.tableplayerDataAll.AbbrevationColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Abbrevation\' in table \'playerDataAll\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableplayerDataAll.AbbrevationColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public byte Profession_ID1 {
+                get {
+                    try {
+                        return ((byte)(this[this.tableplayerDataAll.Profession_ID1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Profession_ID1\' in table \'playerDataAll\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableplayerDataAll.Profession_ID1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Name3 {
+                get {
+                    try {
+                        return ((string)(this[this.tableplayerDataAll.Name3Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Name3\' in table \'playerDataAll\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableplayerDataAll.Name3Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Abbrevation1 {
+                get {
+                    try {
+                        return ((string)(this[this.tableplayerDataAll.Abbrevation1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Abbrevation1\' in table \'playerDataAll\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableplayerDataAll.Abbrevation1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFirst_Profession_IDNull() {
+                return this.IsNull(this.tableplayerDataAll.First_Profession_IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFirst_Profession_IDNull() {
+                this[this.tableplayerDataAll.First_Profession_IDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSecond_Profession_IDNull() {
+                return this.IsNull(this.tableplayerDataAll.Second_Profession_IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSecond_Profession_IDNull() {
+                this[this.tableplayerDataAll.Second_Profession_IDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsProfession_IDNull() {
+                return this.IsNull(this.tableplayerDataAll.Profession_IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetProfession_IDNull() {
+                this[this.tableplayerDataAll.Profession_IDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsName2Null() {
+                return this.IsNull(this.tableplayerDataAll.Name2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetName2Null() {
+                this[this.tableplayerDataAll.Name2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsAbbrevationNull() {
+                return this.IsNull(this.tableplayerDataAll.AbbrevationColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetAbbrevationNull() {
+                this[this.tableplayerDataAll.AbbrevationColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsProfession_ID1Null() {
+                return this.IsNull(this.tableplayerDataAll.Profession_ID1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetProfession_ID1Null() {
+                this[this.tableplayerDataAll.Profession_ID1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsName3Null() {
+                return this.IsNull(this.tableplayerDataAll.Name3Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetName3Null() {
+                this[this.tableplayerDataAll.Name3Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsAbbrevation1Null() {
+                return this.IsNull(this.tableplayerDataAll.Abbrevation1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetAbbrevation1Null() {
+                this[this.tableplayerDataAll.Abbrevation1Column] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -7339,6 +8301,40 @@ namespace World_of_Warcraft_Auction_House_Tracker {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public playersRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class playerDataAllRowChangeEvent : global::System.EventArgs {
+            
+            private playerDataAllRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public playerDataAllRowChangeEvent(playerDataAllRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public playerDataAllRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -13367,6 +14363,192 @@ namespace World_of_Warcraft_Auction_House_Tracker.wowahtPublicDataSetTableAdapte
         public virtual wowahtPublicDataSet.playersDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             wowahtPublicDataSet.playersDataTable dataTable = new wowahtPublicDataSet.playersDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class playerDataAllTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::MySql.Data.MySqlClient.MySqlDataAdapter _adapter;
+        
+        private global::MySql.Data.MySqlClient.MySqlConnection _connection;
+        
+        private global::MySql.Data.MySqlClient.MySqlTransaction _transaction;
+        
+        private global::MySql.Data.MySqlClient.MySqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public playerDataAllTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::MySql.Data.MySqlClient.MySqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::MySql.Data.MySqlClient.MySqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::MySql.Data.MySqlClient.MySqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::MySql.Data.MySqlClient.MySqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::MySql.Data.MySqlClient.MySqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::MySql.Data.MySqlClient.MySqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "playerDataAll";
+            tableMapping.ColumnMappings.Add("Player_ID", "Player_ID");
+            tableMapping.ColumnMappings.Add("Last_Updated", "Last_Updated");
+            tableMapping.ColumnMappings.Add("Name", "Name");
+            tableMapping.ColumnMappings.Add("Server_ID", "Server_ID");
+            tableMapping.ColumnMappings.Add("First_Profession_ID", "First_Profession_ID");
+            tableMapping.ColumnMappings.Add("Second_Profession_ID", "Second_Profession_ID");
+            tableMapping.ColumnMappings.Add("Server_ID1", "Server_ID1");
+            tableMapping.ColumnMappings.Add("Name1", "Name1");
+            tableMapping.ColumnMappings.Add("URL_Name", "URL_Name");
+            tableMapping.ColumnMappings.Add("Sub_Region", "Sub_Region");
+            tableMapping.ColumnMappings.Add("Region", "Region");
+            tableMapping.ColumnMappings.Add("Type", "Type");
+            tableMapping.ColumnMappings.Add("Server_Pop", "Server_Pop");
+            tableMapping.ColumnMappings.Add("Active", "Active");
+            tableMapping.ColumnMappings.Add("Profession_ID", "Profession_ID");
+            tableMapping.ColumnMappings.Add("Name2", "Name2");
+            tableMapping.ColumnMappings.Add("Abbrevation", "Abbrevation");
+            tableMapping.ColumnMappings.Add("Profession_ID1", "Profession_ID1");
+            tableMapping.ColumnMappings.Add("Name3", "Name3");
+            tableMapping.ColumnMappings.Add("Abbrevation1", "Abbrevation1");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::MySql.Data.MySqlClient.MySqlConnection();
+            this._connection.ConnectionString = global::World_of_Warcraft_Auction_House_Tracker.Properties.Settings.Default.wowahtPublicConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
+            this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "`wowaht`.`GetAllPlayerData`";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(wowahtPublicDataSet.playerDataAllDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual wowahtPublicDataSet.playerDataAllDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            wowahtPublicDataSet.playerDataAllDataTable dataTable = new wowahtPublicDataSet.playerDataAllDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

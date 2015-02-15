@@ -23,6 +23,10 @@ namespace World_of_Warcraft_Auction_House_Tracker
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'wowahtPublicDataSet1.playerDataAll' table. You can move, or remove it, as needed.
+            this.playerDataAllTableAdapter.Fill(this.wowahtPublicDataSet1.playerDataAll);
+            // TODO: This line of code loads data into the 'wowahtPublicDataSet.players' table. You can move, or remove it, as needed.
+            this.playersTableAdapter.Fill(this.wowahtPublicDataSet.players);
             // TODO: This line of code loads data into the 'wowahtDataSet.player' table. You can move, or remove it, as needed.
             this.playerTableAdapter.Fill(this.wowahtDataSet.player);
             // TODO: This line of code loads data into the 'wowahtPublicDataSet.profession' table. You can move, or remove it, as needed.
@@ -145,7 +149,7 @@ namespace World_of_Warcraft_Auction_House_Tracker
                 //TODO - Button Clicked - Execute Code Here
                 PlayersTabs.SelectedTab = PlayerStatsTab;
                 UsernameSearchBox.Text = PlayersDataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
-                PlayerStatsServer.Text = PlayersDataGridView.Rows[e.RowIndex].Cells["serverIDDataGridViewTextBoxColumn1"].Value.ToString();
+                PlayerStatsServer.Text = PlayersDataGridView.Rows[e.RowIndex].Cells["Server_ID1"].Value.ToString();
                 UsernameSearchButton_Click(null, null);
             }
         }
@@ -251,6 +255,43 @@ namespace World_of_Warcraft_Auction_House_Tracker
             }
             reader.Close();
             connection.Close();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
+
+        private void ExecuteButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (connection == null)
+                {
+                    connection = new MySql.Data.MySqlClient.MySqlConnection();
+                    connection.ConnectionString = Settings.Default.wowahtPublicConnectionString;
+                }
+                MySql.Data.MySqlClient.MySqlCommand command = new MySql.Data.MySqlClient.MySqlCommand(QueryBox.Text, connection);
+                command.CommandType = CommandType.Text;
+                command.Connection.Open();
+                DataTable dt = new DataTable();
+                dt.Load(command.ExecuteReader(), LoadOption.OverwriteChanges);
+                ResultsDataGrid.DataSource = dt;
+                SearchRawTabs.SelectedTab = ResultsTab;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString(),"SQL Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        private void dataSourceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
