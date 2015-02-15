@@ -64,11 +64,11 @@
             // 
             this.RestartButton.AutoSize = true;
             this.RestartButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.RestartButton.Location = new System.Drawing.Point(253, 81);
+            this.RestartButton.Location = new System.Drawing.Point(216, 84);
             this.RestartButton.Name = "RestartButton";
-            this.RestartButton.Size = new System.Drawing.Size(64, 27);
+            this.RestartButton.Size = new System.Drawing.Size(131, 27);
             this.RestartButton.TabIndex = 6;
-            this.RestartButton.Text = "Restart";
+            this.RestartButton.Text = "Apply and Restart";
             this.RestartButton.UseVisualStyleBackColor = true;
             this.RestartButton.Click += new System.EventHandler(this.button1_Click);
             // 

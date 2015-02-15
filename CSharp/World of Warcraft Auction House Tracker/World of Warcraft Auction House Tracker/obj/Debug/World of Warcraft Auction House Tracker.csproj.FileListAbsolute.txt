@@ -26,3 +26,5 @@ C:\Users\Administrator\WoWAHT\CSharp\World of Warcraft Auction House Tracker\Wor
 C:\Users\Administrator\WoWAHT\CSharp\World of Warcraft Auction House Tracker\World of Warcraft Auction House Tracker\obj\Debug\World_of_Warcraft_Auction_House_Tracker.Properties.Resources.resources
 C:\Users\Administrator\WoWAHT\CSharp\World of Warcraft Auction House Tracker\World of Warcraft Auction House Tracker\obj\Debug\World of Warcraft Auction House Tracker.csproj.GenerateResource.Cache
 C:\Users\Administrator\WoWAHT\CSharp\World of Warcraft Auction House Tracker\World of Warcraft Auction House Tracker\obj\Debug\World_of_Warcraft_Auction_House_Tracker.AboutWindow.resources
+C:\Users\Administrator\WoWAHT\CSharp\World of Warcraft Auction House Tracker\World of Warcraft Auction House Tracker\obj\Debug\World_of_Warcraft_Auction_House_Tracker.ConnectionWindow.resources
+C:\Users\Administrator\WoWAHT\CSharp\World of Warcraft Auction House Tracker\World of Warcraft Auction House Tracker\obj\Debug\World_of_Warcraft_Auction_House_Tracker.ReadMeWindow.resources

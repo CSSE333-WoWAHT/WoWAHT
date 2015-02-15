@@ -315,12 +315,17 @@ namespace World_of_Warcraft_Auction_House_Tracker
 
         private void dataSourceToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            new ConnectionWindow().Show();
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new AboutWindow().Show();
+        }
+
+        private void readMeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new ReadMeWindow().Show(); 
         }
     }
 }
