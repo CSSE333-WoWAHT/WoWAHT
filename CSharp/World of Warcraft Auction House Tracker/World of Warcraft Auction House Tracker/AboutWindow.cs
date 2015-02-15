@@ -30,7 +30,7 @@ namespace World_of_Warcraft_Auction_House_Tracker
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // Specify that the link was visited. 
-            this.SourceLink.LinkVisited = true;
+            this.sourceLink.LinkVisited = true;
 
             // Navigate to a URL.
             System.Diagnostics.Process.Start("https://github.com/CSSE333-WoWAHT/WoWAHT");
@@ -39,7 +39,7 @@ namespace World_of_Warcraft_Auction_House_Tracker
         private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // Specify that the link was visited. 
-            this.SourceLink.LinkVisited = true;
+            this.sourceLink.LinkVisited = true;
 
             // Navigate to a URL.
             System.Diagnostics.Process.Start("http://www.rose-hulman.edu/");
