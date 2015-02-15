@@ -31,6 +31,7 @@
             this.connectionWarningLabel = new System.Windows.Forms.Label();
             this.connectionStringEntry = new System.Windows.Forms.TextBox();
             this.connectionStringLabel = new System.Windows.Forms.Label();
+            this.RestartButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // connectionWarningLabel
@@ -59,11 +60,24 @@
             this.connectionStringLabel.TabIndex = 3;
             this.connectionStringLabel.Text = "Connection String (requires restart):";
             // 
+            // RestartButton
+            // 
+            this.RestartButton.AutoSize = true;
+            this.RestartButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.RestartButton.Location = new System.Drawing.Point(253, 81);
+            this.RestartButton.Name = "RestartButton";
+            this.RestartButton.Size = new System.Drawing.Size(64, 27);
+            this.RestartButton.TabIndex = 6;
+            this.RestartButton.Text = "Restart";
+            this.RestartButton.UseVisualStyleBackColor = true;
+            this.RestartButton.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ConnectionWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(579, 75);
+            this.ClientSize = new System.Drawing.Size(579, 123);
+            this.Controls.Add(this.RestartButton);
             this.Controls.Add(this.connectionWarningLabel);
             this.Controls.Add(this.connectionStringEntry);
             this.Controls.Add(this.connectionStringLabel);
@@ -80,5 +94,6 @@
         private System.Windows.Forms.Label connectionWarningLabel;
         private System.Windows.Forms.TextBox connectionStringEntry;
         private System.Windows.Forms.Label connectionStringLabel;
+        private System.Windows.Forms.Button RestartButton;
     }
 }

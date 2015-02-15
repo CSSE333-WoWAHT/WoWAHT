@@ -16,5 +16,10 @@ namespace World_of_Warcraft_Auction_House_Tracker
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
     }
 }
