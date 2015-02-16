@@ -31,5 +31,10 @@ namespace World_of_Warcraft_Auction_House_Tracker
         {
 
         }
+
+        private void professionRMLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
