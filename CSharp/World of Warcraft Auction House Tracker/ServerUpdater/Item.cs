@@ -90,14 +90,21 @@ namespace ServerUpdater
         {
             var webRequest = WebRequest.Create(@"http://us.battle.net/api/wow/item/" + id);
 
-            String data;
-            using (var response = webRequest.GetResponse())
-            using (var content = response.GetResponseStream())
-            using (var reader = new StreamReader(content))
+            try
             {
-                data = reader.ReadToEnd();
+                String data;
+                using (var response = webRequest.GetResponse())
+                using (var content = response.GetResponseStream())
+                using (var reader = new StreamReader(content))
+                {
+                    data = reader.ReadToEnd();
+                }
+                return Newtonsoft.Json.JsonConvert.DeserializeObject<Item>(data);
             }
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Item>(data);
+            catch (WebException)
+            {
+                return null;
+            }
         }
     }
 }

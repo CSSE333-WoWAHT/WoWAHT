@@ -123,7 +123,9 @@ namespace ServerUpdater
             foreach (wowahtAdminDataSet.itemNullStatsRow row in idt.Rows)
             {
                 Item item = Item.getItem(row.WoW_Item_ID);
-                iTa.UpdateSBNAQuery(item.sellPrice, item.buyPrice, item.name, item.isAuctionable, row.Item_ID);
+                if (item == null)
+                    continue;
+                iTa.UpdateQuery(item.sellPrice, item.buyPrice, item.name, item.isAuctionable, row.WoW_Item_ID);
             }
         }
 
