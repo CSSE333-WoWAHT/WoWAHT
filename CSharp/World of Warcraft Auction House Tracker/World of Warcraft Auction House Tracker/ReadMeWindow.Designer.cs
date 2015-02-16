@@ -42,25 +42,25 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(3, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(515, 34);
+            this.label1.Size = new System.Drawing.Size(469, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Overview: Contains statistics about the Auction House Tracker Database. There \r\ni" +
-    "s also an option to change the connection string.";
+            this.label1.Text = "Overview: Contains statistics about the Auction House Tracker Database.";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 63);
+            this.label2.Location = new System.Drawing.Point(3, 36);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(258, 17);
+            this.label2.Size = new System.Drawing.Size(499, 34);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Auctions: Shows list of current auctions.";
+            this.label2.Text = "Auctions: Shows list of current auctions. List can be filtered by item, player, o" +
+    "r \r\nserver.";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 107);
+            this.label3.Location = new System.Drawing.Point(3, 83);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(512, 34);
             this.label3.TabIndex = 2;
@@ -71,7 +71,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 157);
+            this.label4.Location = new System.Drawing.Point(3, 133);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(523, 34);
             this.label4.TabIndex = 3;
@@ -81,7 +81,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 201);
+            this.label5.Location = new System.Drawing.Point(3, 177);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(516, 34);
             this.label5.TabIndex = 4;
@@ -91,7 +91,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 245);
+            this.label6.Location = new System.Drawing.Point(3, 221);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(406, 17);
             this.label6.TabIndex = 5;
@@ -100,18 +100,17 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 276);
+            this.label7.Location = new System.Drawing.Point(3, 252);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(494, 34);
+            this.label7.Size = new System.Drawing.Size(351, 17);
             this.label7.TabIndex = 6;
-            this.label7.Text = "Search Raw: Allows user to do an advanced search for auctions or to search \r\nusin" +
-    "g raw sql code.";
+            this.label7.Text = "Search Raw: Allows user to search using raw sql code.";
             // 
             // ReadMeWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(519, 468);
+            this.ClientSize = new System.Drawing.Size(519, 294);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
