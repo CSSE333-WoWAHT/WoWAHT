@@ -13,7 +13,7 @@ namespace World_of_Warcraft_Auction_House_Tracker.Properties {
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "12.0.0.0")]
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+    public sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
         
@@ -27,9 +27,21 @@ namespace World_of_Warcraft_Auction_House_Tracker.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("server=cj-w7-pc.reshall.rose-hulman.edu;user id=wowAHTUser;database=wowaht")]
+        public string wowahtPublicConnectionString2 {
+            get {
+                return ((string)(this["wowahtPublicConnectionString2"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=cj-w7-pc.reshall.rose-hulman.edu;user id=wowAHTUser;database=wowaht")]
         public string wowahtPublicConnectionString {
             get {
                 return ((string)(this["wowahtPublicConnectionString"]));
+            }
+            set {
+                this["wowahtPublicConnectionString"] = value;
             }
         }
     }

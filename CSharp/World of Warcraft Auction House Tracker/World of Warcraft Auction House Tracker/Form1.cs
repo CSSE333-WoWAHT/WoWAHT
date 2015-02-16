@@ -79,7 +79,9 @@ namespace World_of_Warcraft_Auction_House_Tracker
 
         private void itemSearch_TextChanged(object sender, EventArgs e)
         {
-            (Items_Datagrid.DataSource as BindingSource).Filter = string.Format("Name Like '{0}*'", itemSearch.Text.Replace("'", "''"));
+            var idg = Items_Datagrid.DataSource;
+            var temp = idg as DataTable;
+            temp.DefaultView.RowFilter = string.Format("Name Like '{0}*'", itemSearch.Text.Replace("'", "''"));
         }
 
         private void Servers_SearchLabel_Click(object sender, EventArgs e)

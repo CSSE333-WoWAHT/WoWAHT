@@ -83,7 +83,7 @@
   <xs:element name="wowahtDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="wowahtDataSet" msprop:Generator_UserDSName="wowahtDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="player" msprop:Generator_TableClassName="playerDataTable" msprop:Generator_TableVarName="tableplayer" msprop:Generator_TablePropName="player" msprop:Generator_RowDeletingName="playerRowDeleting" msprop:Generator_RowChangingName="playerRowChanging" msprop:Generator_RowEvHandlerName="playerRowChangeEventHandler" msprop:Generator_RowDeletedName="playerRowDeleted" msprop:Generator_UserTableName="player" msprop:Generator_RowChangedName="playerRowChanged" msprop:Generator_RowEvArgName="playerRowChangeEvent" msprop:Generator_RowClassName="playerRow">
+        <xs:element name="player" msprop:Generator_TableClassName="playerDataTable" msprop:Generator_TableVarName="tableplayer" msprop:Generator_RowChangedName="playerRowChanged" msprop:Generator_TablePropName="player" msprop:Generator_RowDeletingName="playerRowDeleting" msprop:Generator_RowChangingName="playerRowChanging" msprop:Generator_RowEvHandlerName="playerRowChangeEventHandler" msprop:Generator_RowDeletedName="playerRowDeleted" msprop:Generator_RowClassName="playerRow" msprop:Generator_UserTableName="player" msprop:Generator_RowEvArgName="playerRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Player_ID" msprop:Generator_ColumnVarNameInTable="columnPlayer_ID" msprop:Generator_ColumnPropNameInRow="Player_ID" msprop:Generator_ColumnPropNameInTable="Player_IDColumn" msprop:Generator_UserColumnName="Player_ID" type="xs:unsignedInt" />

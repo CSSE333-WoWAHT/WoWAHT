@@ -62,9 +62,6 @@
             this.Items_SearchTab = new System.Windows.Forms.TabPage();
             this.Items_SearchLable = new System.Windows.Forms.Label();
             this.Items_Datagrid = new System.Windows.Forms.DataGridView();
-            this.woWItemIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.itemTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.itemSearch = new System.Windows.Forms.TextBox();
             this.Items_StatsTab = new System.Windows.Forms.TabPage();
@@ -184,6 +181,9 @@
             this.auctionsTableAdapter3 = new World_of_Warcraft_Auction_House_Tracker.wowahtPublicDataSetTableAdapters.auctionsTableAdapter();
             this.playersTableAdapter = new World_of_Warcraft_Auction_House_Tracker.wowahtPublicDataSetTableAdapters.playersTableAdapter();
             this.playerDataAllTableAdapter = new World_of_Warcraft_Auction_House_Tracker.wowahtPublicDataSetTableAdapters.playerDataAllTableAdapter();
+            this.woWItemIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.itemTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Servers_DataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serverBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wowahtPublicDataSetBindingSource)).BeginInit();
@@ -381,7 +381,7 @@
             // readMeToolStripMenuItem
             // 
             this.readMeToolStripMenuItem.Name = "readMeToolStripMenuItem";
-            this.readMeToolStripMenuItem.Size = new System.Drawing.Size(175, 24);
+            this.readMeToolStripMenuItem.Size = new System.Drawing.Size(133, 24);
             this.readMeToolStripMenuItem.Text = "ReadMe";
             this.readMeToolStripMenuItem.Click += new System.EventHandler(this.readMeToolStripMenuItem_Click);
             // 
@@ -562,33 +562,6 @@
             this.Items_Datagrid.Size = new System.Drawing.Size(580, 493);
             this.Items_Datagrid.TabIndex = 0;
             this.Items_Datagrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Items_Datagrid_CellContentClick);
-            // 
-            // woWItemIDDataGridViewTextBoxColumn
-            // 
-            this.woWItemIDDataGridViewTextBoxColumn.DataPropertyName = "WoW_Item_ID";
-            this.woWItemIDDataGridViewTextBoxColumn.HeaderText = "Item ID";
-            this.woWItemIDDataGridViewTextBoxColumn.Name = "woWItemIDDataGridViewTextBoxColumn";
-            this.woWItemIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.woWItemIDDataGridViewTextBoxColumn.Visible = false;
-            this.woWItemIDDataGridViewTextBoxColumn.Width = 175;
-            // 
-            // nameDataGridViewTextBoxColumn1
-            // 
-            this.nameDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn1.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
-            this.nameDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.nameDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // itemTypeDataGridViewTextBoxColumn
-            // 
-            this.itemTypeDataGridViewTextBoxColumn.DataPropertyName = "Item_Type";
-            this.itemTypeDataGridViewTextBoxColumn.HeaderText = "Item Type";
-            this.itemTypeDataGridViewTextBoxColumn.Name = "itemTypeDataGridViewTextBoxColumn";
-            this.itemTypeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.itemTypeDataGridViewTextBoxColumn.Width = 175;
             // 
             // itemsBindingSource1
             // 
@@ -1642,6 +1615,32 @@
             // 
             this.playerDataAllTableAdapter.ClearBeforeFill = true;
             // 
+            // woWItemIDDataGridViewTextBoxColumn
+            // 
+            this.woWItemIDDataGridViewTextBoxColumn.DataPropertyName = "WoW_Item_ID";
+            this.woWItemIDDataGridViewTextBoxColumn.HeaderText = "Item ID";
+            this.woWItemIDDataGridViewTextBoxColumn.Name = "woWItemIDDataGridViewTextBoxColumn";
+            this.woWItemIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.woWItemIDDataGridViewTextBoxColumn.Width = 175;
+            // 
+            // nameDataGridViewTextBoxColumn1
+            // 
+            this.nameDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn1.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
+            this.nameDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.nameDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // itemTypeDataGridViewTextBoxColumn
+            // 
+            this.itemTypeDataGridViewTextBoxColumn.DataPropertyName = "Item_Type";
+            this.itemTypeDataGridViewTextBoxColumn.HeaderText = "Item Type";
+            this.itemTypeDataGridViewTextBoxColumn.Name = "itemTypeDataGridViewTextBoxColumn";
+            this.itemTypeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.itemTypeDataGridViewTextBoxColumn.Width = 175;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1844,9 +1843,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Name1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Name2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Name3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn woWItemIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewButtonColumn nameDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn itemTypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn playerIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastUpdatedDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn3;
@@ -1867,6 +1863,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn professionID1DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn name3DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn abbrevation1DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn woWItemIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn nameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemTypeDataGridViewTextBoxColumn;
     }
 }
 
