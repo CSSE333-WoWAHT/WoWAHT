@@ -85,7 +85,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Resources.cs" />
-    <Compile Include="Spell.cs" />
     <Compile Include="wowahtAdminDataSet.cs">
       <DependentUpon>wowahtAdminDataSet.xsd</DependentUpon>
       <SubType>Component</SubType>

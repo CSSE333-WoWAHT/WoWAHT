@@ -26,19 +26,7 @@ namespace ServerUpdater
 
         private void RecipeButton_Click(object sender, EventArgs e)
         {
-            printToConsole("Start: Updaing Recipe Spell Names");
-            wowahtAdminDataSetTableAdapters.recipeTableAdapter rTa = new wowahtAdminDataSetTableAdapters.recipeTableAdapter();
-            wowahtAdminDataSet.recipeDataTable rDt = rTa.GetData();
 
-            foreach (wowahtAdminDataSet.recipeRow row in rDt.Rows)
-            {
-                Spell spell = Spell.getSpell(row.Recipe_ID);
-                if (spell == null)
-                    continue;
-                row.Name = spell.name;
-                rTa.Update(row);
-            }
-            printToConsole("Done: Updaing Recipe Spell Names");
         }
 
         private void StopStartUpdateButton_Click(object sender, EventArgs e)
