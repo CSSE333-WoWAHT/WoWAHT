@@ -16,7 +16,7 @@ namespace World_of_Warcraft_Auction_House_Tracker
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new WoWAHTMainWindow());
+            Application.Run(new Form1());
         }
     }
 }
